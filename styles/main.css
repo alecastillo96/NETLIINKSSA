@@ -120,10 +120,11 @@ header h1 small {
 
 .article h3 {
   font-size: 22pt;
-  position: relative;
   padding-left: 20px;
   margin-bottom: 32pt;
 }
+
+.article p { line-height: calc(8pt * 3); }
 
 .article--right h3  { border-left: 8px solid teal; }
 
