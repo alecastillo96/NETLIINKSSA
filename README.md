@@ -4,11 +4,11 @@ _NETWORKING & SECURITY_
 
 ## TODO
 - *Header*
-- Section to show content
-- Mail subscribe
+- Sections that display information
+- Subscription system
   - System for subscription
   - Database
-- Redefine styles
+**Responsive Size**
 - Darkmode
 - Tablet size
 - Phone size
