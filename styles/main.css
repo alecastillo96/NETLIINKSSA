@@ -1,0 +1,146 @@
+/* Using the 8-point grid */
+/*
+  Most used screen resolutions
+
+    RESOLUTION    MULTIPLES OF 8    Multiples of 10
+  1 1366x768          x ✓                x x
+  2 1920x1080         ✓ ✓                ✓ ✓
+  3 1280x1024         ✓ ✓                x ✓
+  4 1440x900          ✓ x                ✓ ✓
+  5 1600x900          ✓ x                ✓ ✓
+  6 1280x800          ✓ ✓                ✓ ✓
+  7 1024x768          ✓ ✓                x x
+  8 1360x768          ✓ ✓                ✓ x
+
+*/
+
+/* RESET ALL STYLES */
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  font-smoothing: all;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+/* Global font */
+body, html {
+  font-family: 'Inter', sans-serif;
+}
+
+a { text-decoration: none; }
+
+h1, h2, h3, h4, h5, h6, b {
+  color: #333;
+}
+
+p {
+  color: #777;
+}
+
+/* Container Style */
+.container {
+  padding: 32pt 32pt;
+  width: 100%;
+  max-width: 1360px;
+  margin: auto;
+  /*for mobile and desktop use 16pt*/
+}
+
+header {
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 55vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  background-image: url('../images/collin-armstrong-8FxJi5wuwKc-unsplash.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+header h1 {
+  color: #FFF;
+  font-size: 40pt;
+}
+
+header h1 small {
+  font-size: 32pt;
+  font-weight: 200;
+  font-style: italic;
+}
+
+/* Menu-bar */
+.menu-bar {
+  display: block;
+  text-align: center;
+  width: 100%;
+  padding-top: 16pt;
+  padding-bottom: 16pt;
+}
+
+/* Remove list dots */
+.menu-bar ul { list-style: none; }
+
+/* Align items to center */
+.menu-bar li { display: inline-block; }
+
+.menu-bar a {
+  padding: 8pt 16pt;
+  color: #333;
+}
+
+.menu-bar a:hover {
+  /* ... */
+}
+
+.menu-bar .showcase {
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+
+/* DEFINE GRID SYSTEM */
+.article {
+  display: grid;
+
+  /* Divide the div into two equal parts */
+  grid-template-columns: 1fr 1fr;
+  /* space between items */
+  grid-gap: 40pt;
+
+  padding-bottom: 16pt;
+  padding-top: 16pt;
+}
+
+/* CHANGE SIZE OF IMAGES */
+.article img {
+  width: 100%;
+}
+
+.article h3 {
+  font-size: 22pt;
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 32pt;
+}
+
+.article--right h3  { border-left: 8px solid teal; }
+
+.article--left h3  {
+
+  border-right: 8px solid teal;
+  padding-right: 20px;
+  text-align: right;
+}
+
+.article .content {
+  margin-bottom: 32pt;
+  margin-top: 32pt;
+}
+
+@supports (display: table-cell) and (display: list-item) {
+
+}
