@@ -105,14 +105,12 @@ header h1 small {
 /* DEFINE GRID SYSTEM */
 .article {
   display: grid;
-
   /* Divide the div into two equal parts */
   grid-template-columns: 1fr 1fr;
   /* space between items */
   grid-gap: 40pt;
-
-  padding-bottom: 16pt;
-  padding-top: 16pt;
+  padding-bottom: 32pt;
+  padding-top: 32pt;
 }
 
 /* CHANGE SIZE OF IMAGES */
@@ -130,9 +128,12 @@ header h1 small {
 .article--right h3  { border-left: 8px solid teal; }
 
 .article--left h3  {
-
   border-right: 8px solid teal;
   padding-right: 20px;
+  text-align: right;
+}
+
+.article--left p {
   text-align: right;
 }
 
