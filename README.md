@@ -8,6 +8,7 @@ _NETWORKING & SECURITY_
 - Subscription system
   - System for subscription
   - Database
+
 **Responsive Size**
 - Darkmode
 - Tablet size
