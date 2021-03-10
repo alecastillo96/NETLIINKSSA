@@ -26,7 +26,7 @@
 }
 
 /* Global font */
-body, html {
+body, html, input, button, table {
   font-family: 'Inter', sans-serif;
 }
 
@@ -91,10 +91,11 @@ header h1 small {
 .menu-bar a {
   padding: 8pt 16pt;
   color: #333;
+  transition: .3s all ease;
 }
 
 .menu-bar a:hover {
-  /* ... */
+  color: #009B8B;
 }
 
 .menu-bar .showcase {
@@ -120,27 +121,76 @@ header h1 small {
 
 .article h3 {
   font-size: 22pt;
-  padding-left: 20px;
   margin-bottom: 32pt;
 }
-
-.article p { line-height: calc(8pt * 3); }
-
-.article--right h3  { border-left: 8px solid teal; }
+.article--right h3  {
+  border-left: 8px solid #009B8B;
+  padding-left: 20px;
+}
 
 .article--left h3  {
-  border-right: 8px solid teal;
+  border-right: 8px solid #009B8B;
   padding-right: 20px;
   text-align: right;
 }
 
-.article--left p {
-  text-align: right;
-}
+.article p { line-height: calc(8pt * 3); }
+.article--left p { text-align: right; }
 
 .article .content {
   margin-bottom: 32pt;
   margin-top: 32pt;
+}
+
+.submit {
+  display:  grid;
+  background: rgba(0, 155, 179, 0.13);
+  /* Divide the div into two equal parts */
+  grid-template-columns: 2fr 1.5fr;
+  /* space between items */
+  grid-gap: 40pt;
+}
+
+.submit .message {
+  padding:  32pt 26pt;
+}
+
+.submit h1 {
+  color: #009B8B;
+  font-size: 24pt;
+  line-height: calc(24px * 1.900);
+  margin-bottom: 18pt;
+}
+
+.submit input[type=email] {
+  display:  block;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #009B8B;
+  font-size: 14pt;
+  padding: calc(8pt - 5pt);
+}
+
+.submit input[type=submit] {
+  display: block;
+  border: none;
+  border-radius: 5px;
+  background-color:  #009B8B;
+  color: #FFF;
+  padding: 6pt 15pt;
+  margin:  14pt 0;
+  font-size: 14px;
+  cursor:  pointer;
+  transition: .3s all ease;
+}
+
+.submit input[type=submit]:hover {
+  background-color: rgba(0, 155, 179, 0.80);
+}
+
+
+.submit img {
+  width: 100%;
 }
 
 @supports (display: table-cell) and (display: list-item) {
