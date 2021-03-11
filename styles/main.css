@@ -68,16 +68,8 @@ p {
   /*for mobile and desktop use 16pt*/
 }
 
-.container--article:nth-child(even) {
-  background-color: #f2f2f2;
-  text-align: right;
-}
-
-.container--article:nth-child(even) h3 {
-  border-left: none;
-  padding-right: 20px;
-  border-right:  8px solid #009B8B;
-}
+.container--article { background-color: #F2F2F2; }
+.container--article:nth-child(even) { background-color: #FFF; }
 
 header {
   display: flex;
@@ -86,11 +78,12 @@ header {
   justify-content: center;
   text-align: center;
   height: 55vh;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.4);
   background-image: url('../images/collin-armstrong-8FxJi5wuwKc-unsplash.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  background-blend-mode: multiply;
 }
 
 header h1 {
@@ -165,8 +158,6 @@ header h1 small {
 .article h3 {
   font-size: 22pt;
   margin-bottom: 32pt;
-  border-left: 8px solid #009B8B;
-  padding-left: 20px;
 }
 
 .article p { line-height: calc(8pt * 3); }
@@ -187,7 +178,7 @@ header h1 small {
   grid-template-columns: 2fr 1.5fr;
   /* space between items */
   grid-gap: 40pt;
-  border-radius: 25px;
+  border-radius: 5px;
 }
 
 .submit .message {
@@ -231,8 +222,8 @@ header h1 small {
   background-image: url('../images/joanna-kosinska-uGcDWKN91Fs-unsplash.jpg');
   background-size: cover;
   background-position: center;
-  border-top-right-radius: 25px;
-  border-bottom-right-radius: 25px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 /* ---------------------------------------------- */
@@ -240,11 +231,27 @@ header h1 small {
 /* ---------------------------------------------- */
 
 
-/* ------------------------------------------------ */
+/* ----------------------------------------------------- */
 /* ------------------- Extra support ------------------- */
-/* ------------------------------------------------ */
+/* ----------------------------------------------------- */
 @supports (display: table-cell) and (display: list-item) {
 
+}
+
+/* -------------------------------------------- */
+/* ------------------- MODS ------------------- */
+/* -------------------------------------------- */
+[text-to-left] { text-align: left; }
+[text-to-right] { text-align: right; }
+
+[a-title-l] {
+  border-left: 8px solid #009B8B;
+  padding-left: 20px;
+}
+
+[a-title-r] {
+  border-right: 8px solid #009B8B;
+  padding-right: 20px;
 }
 
 
@@ -264,19 +271,8 @@ header h1 small {
 /* --------------------------------------------------- */
 /* MEDIA SCREEN FOR 800PX */
 @media screen and (max-width: 800px) {
-  header h1 {
-    text-shadow: 0 2px 5px rgba(0,0,0,0.8);
-  }
-
-  .container--article:nth-child(even) {
-    background-color: #f2f2f2;
-    text-align: left;
-  }
-
-  .container--article:nth-child(even) h3 {
-    padding-right: 0;
-    border-right: none;
-    border-left: 8px solid #009B8B;
+  header {
+    background-color: rgba(0,0,0,0.8);
   }
 
   .article {
@@ -338,7 +334,7 @@ header h1 small {
   .submit {
     grid-template-columns: 1fr;
     text-align: center;
-    border-radius: 15px;
+    border-radius: 5px;
   }
 
   .submit input[type=submit] {
@@ -349,6 +345,20 @@ header h1 small {
 
   .submit .img4 {
     display: none;
+  }
+
+  [text-to-left] { text-align: left; }
+  [text-to-right] { text-align: left; }
+
+  [a-title-l] {
+    border-left: 8px solid #009B8B;
+    padding-left: 20px;
+  }
+
+  [a-title-r] {
+    border-left: 8px solid #009B8B;
+    border-right: none;
+    padding-left: 20px;
   }
 }
 
@@ -394,5 +404,27 @@ header h1 small {
 
 /* DARKMODE PARAMETERS */
 @media screen and (prefers-color-scheme: dark) {
-  /* ... */
+  html, body {
+    background-color: #151616;
+  }
+
+  .container--article {
+    background-color: #151616;
+  }
+
+  .container--article:nth-child(even) {
+    background-color: #1C1D1D;
+  }
+
+  .container--article h3 {
+    color: #FFF;
+  }
+
+  .menu-bar {
+    background: rgba(20, 20, 20, 0.9);
+  }
+
+  .menu-bar a {
+    color: #FFF;
+  }
 }
