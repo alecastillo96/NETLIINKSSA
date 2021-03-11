@@ -34,7 +34,7 @@ body, html, input, button, table {
   font-family: 'Inter', sans-serif;
 }
 
-/* No support in IE, or Safari =/
+/* No support in IE, or Safari */
 html{
   scroll-behavior: auto;
   scroll-behavior: smooth;
