@@ -3,8 +3,6 @@ _NETWORKING & SECURITY_
 
 
 ## TODO
-- *Header*
-- Sections that display information
 - Subscription system
   - System for subscription
   - Database
@@ -18,12 +16,6 @@ _NETWORKING & SECURITY_
 - main
 - Lab
 - develop
-
-
-**Colors**
-- Black: #333333
-- dark: #777777
-- primary:
 
 **Other adjust**
 border-radius: 5px
