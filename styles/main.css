@@ -194,6 +194,7 @@ header h1 small {
 }
 
 .submit input[type=email] {
+  -webkit-appearance: none;
   display:  block;
   width: 100%;
   border-radius: 5px;
