@@ -60,6 +60,7 @@ header {
   background-image: url('../images/collin-armstrong-8FxJi5wuwKc-unsplash.jpg');
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
 }
 
 header h1 {
@@ -112,6 +113,30 @@ header h1 small {
   grid-gap: 40pt;
   padding-bottom: 32pt;
   padding-top: 32pt;
+}
+
+.img1 {
+  background-image: url('../images/milosz-klinowski-BW0d0IllW8E-unsplash.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.img2 {
+  background-image: url('../images/jordan-harrison-40XgDxBfYXM-unsplash.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.img3 {
+  background-image: url('../images/elly-brian-s_C8yBxJyvM-unsplash.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.img4 {
+  background-image: url('../images/joanna-kosinska-uGcDWKN91Fs-unsplash.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 /* CHANGE SIZE OF IMAGES */
@@ -194,5 +219,11 @@ header h1 small {
 }
 
 @supports (display: table-cell) and (display: list-item) {
+
+}
+
+
+/* MEDIA SCREEN FOR 800PX */
+@media only screen and (max-width: 800px) {
 
 }
