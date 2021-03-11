@@ -83,6 +83,7 @@ header {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  -webkit-background-attachment: fixed;
   background-blend-mode: multiply;
 }
 
@@ -205,7 +206,9 @@ header h1 small {
   display: block;
   border: none;
   border-radius: 5px;
+  -webkit-border-radius: 5px;
   background-color:  #009B8B;
+  -webkit-background-color:  #009B8B;
   color: #FFF;
   padding: 6pt 15pt;
   margin:  14pt 0;
@@ -425,6 +428,19 @@ header h1 small {
   }
 
   .menu-bar a {
+    color: #FFF;
+  }
+
+  .submit {
+    background-color: #1C1D1D !important;
+  }
+
+  .submit h1 {
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .submit input[type=email] {
+    background-color: #151616;
     color: #FFF;
   }
 }
