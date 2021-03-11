@@ -46,7 +46,10 @@ html {
   -webkit-overflow-scrolling: touch;
 }
 
-a { text-decoration: none; }
+a { 
+  text-decoration: none;
+  color: #009B8B;
+}
 
 h1, h2, h3, h4, h5, h6, b {
   color: #333;
@@ -63,6 +66,17 @@ p {
   max-width: 1360px;
   margin: auto;
   /*for mobile and desktop use 16pt*/
+}
+
+.container--article:nth-child(even) {
+  background-color: #f2f2f2;
+  text-align: right;
+}
+
+.container--article:nth-child(even) h3 {
+  border-left: none;
+  padding-right: 20px;
+  border-right:  8px solid #009B8B;
 }
 
 header {
@@ -90,10 +104,9 @@ header h1 small {
   font-style: italic;
 }
 
-/* ------------------------------------------------
-  ------------------- Menu-bar -------------------
-  ------------------------------------------------ */
-
+/* ------------------------------------------------ */
+/* ------------------- Menu-bar ------------------- */
+/* ------------------------------------------------ */
 .menu-bar {
   display: block;
   text-align: center;
@@ -128,6 +141,10 @@ header h1 small {
   text-transform: uppercase;
 }
 
+/* ------------------------------------------------ */
+/* ------------------- Articles ------------------- */
+/* ------------------------------------------------ */
+
 /* DEFINE GRID SYSTEM */
 .article {
   display: grid;
@@ -142,39 +159,26 @@ header h1 small {
 /* CHANGE SIZE OF IMAGES */
 .article img {
   width: 100%;
+  border-radius: 5px;
 }
 
 .article h3 {
   font-size: 22pt;
   margin-bottom: 32pt;
-}
-.article--right h3  {
   border-left: 8px solid #009B8B;
   padding-left: 20px;
 }
 
-.article--left h3  {
-  border-right: 8px solid #009B8B;
-  padding-right: 20px;
-  text-align: right;
-}
-
 .article p { line-height: calc(8pt * 3); }
-
-.article--left p {
-  text-align: right; 
-}
 
 .article .content {
   margin-bottom: 32pt;
   margin-top: 32pt;
 }
 
-.img4 {
-  background-image: url('../images/joanna-kosinska-uGcDWKN91Fs-unsplash.jpg');
-  background-size: cover;
-  background-position: center;
-}
+/* -------------------------------------------------------- */
+/* ------------------- Subscription bar ------------------- */
+/* -------------------------------------------------------- */
 
 .submit {
   display:  grid;
@@ -183,6 +187,7 @@ header h1 small {
   grid-template-columns: 2fr 1.5fr;
   /* space between items */
   grid-gap: 40pt;
+  border-radius: 25px;
 }
 
 .submit .message {
@@ -222,16 +227,30 @@ header h1 small {
   background-color: rgba(0, 155, 179, 0.80);
 }
 
-
-.submit img {
-  width: 100%;
+.img4 {
+  background-image: url('../images/joanna-kosinska-uGcDWKN91Fs-unsplash.jpg');
+  background-size: cover;
+  background-position: center;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
 }
 
+/* ---------------------------------------------- */
+/* ------------------- Footer ------------------- */
+/* ---------------------------------------------- */
+
+
+/* ------------------------------------------------ */
+/* ------------------- Extra support ------------------- */
+/* ------------------------------------------------ */
 @supports (display: table-cell) and (display: list-item) {
 
 }
 
 
+/* ----------------------------------------------------- */
+/* ------------------- screen: 930px ------------------- */
+/* ----------------------------------------------------- */
 /* Adaptative display for 930px */
 @media screen and (max-width: 930px) {
   .article .content {
@@ -240,10 +259,24 @@ header h1 small {
   }
 }
 
+/* --------------------------------------------------- */
+/* ------------------- screen: 800 ------------------- */
+/* --------------------------------------------------- */
 /* MEDIA SCREEN FOR 800PX */
 @media screen and (max-width: 800px) {
   header h1 {
     text-shadow: 0 2px 5px rgba(0,0,0,0.8);
+  }
+
+  .container--article:nth-child(even) {
+    background-color: #f2f2f2;
+    text-align: left;
+  }
+
+  .container--article:nth-child(even) h3 {
+    padding-right: 0;
+    border-right: none;
+    border-left: 8px solid #009B8B;
   }
 
   .article {
@@ -262,23 +295,12 @@ header h1 small {
     display: none;
   }
 
-  .article--left .content h3 {
-    text-align: left;
-    border-right: none;
-    border-left: 8px solid #009B8B;
-    padding-left: 20px;
-  }
-
-  .article--left .content p {
-    text-align: left;
-  }
-
   #security,
   #networking,
   #ti {
     margin-bottom: 20px;
-    backdrop-filter:  saturate(50px);
-    -webkit-backdrop-filter:  saturate(50px);
+    backdrop-filter: saturate(50px);
+    -webkit-backdrop-filter: saturate(50px);
   }
 
   #security {
@@ -312,8 +334,41 @@ header h1 small {
   #security .article .content p, #networking .article .content p, #ti .article .content p {
     color: rgba(255, 255, 255, 0.9);
   }
+
+  .submit {
+    grid-template-columns: 1fr;
+    text-align: center;
+    border-radius: 15px;
+  }
+
+  .submit input[type=submit] {
+    margin-right: auto;
+    margin-left: auto;
+    text-transform: uppercase;
+  }
+
+  .submit .img4 {
+    display: none;
+  }
 }
 
+/* ----------------------------------------------------- */
+/* ------------------- screen: 600px ------------------- */
+/* ----------------------------------------------------- */
+@media screen and (max-width: 600px) {
+  .menu-bar {
+    display: none;
+  }
+  .mobile-spacing {
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+/* ----------------------------------------------------- */
+/* ------------------- screen: 414px ------------------- */
+/* ----------------------------------------------------- */
 @media screen and (max-width: 414px) {
   header {
     height: 100vh;
@@ -325,6 +380,15 @@ header h1 small {
 
   header h1 small {
     font-size: 22pt;
+  }
+
+  .container {
+    padding: 18pt;
+  }
+
+  .submit h1 {
+    font-size: 14pt;
+    line-height: 22pt;
   }
 }
 
