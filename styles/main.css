@@ -25,8 +25,8 @@
   box-sizing: border-box;
 }
 
-.resp {
-  display: none !important;
+#resp {
+  display: none;
 }
 
 /* Global font */
@@ -245,11 +245,11 @@ header h1 small {
     text-shadow: 0 2px 5px rgba(0,0,0,0.8);
   }
 
-  .resp {
-    display: block !!important;
+  #resp {
+    display: block;
   }
 
-  .noresp {
+  #noresp {
     display: none;
   }
 
@@ -262,6 +262,31 @@ header h1 small {
   }
   .article h3  {
     margin-bottom: 16pt;
+  }
+
+  .article--left .content {
+    margin-top: 22pt;
+    margin-bottom:  20pt;
+  }
+
+  .article--left .content h3 {
+    text-align: left;
+    border-right: none;
+    border-left: 8px solid #009B8B;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  header {
+    height: 100vh;
+  }
+
+  header h1 {
+    font-size: 32pt;
+  }
+
+  header h1 small {
+    font-size: 22pt;
   }
 }
 
