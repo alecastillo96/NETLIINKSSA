@@ -34,6 +34,10 @@ body, html, input, button, table {
   font-family: 'Inter', sans-serif;
 }
 
+html, body, input, p, h1, h2, h3, h4, h5, h6, table, br, div, a, img, form, button {
+  transition: .3s all ease;
+}
+
 /* No support in IE, or Safari */
 html {
   scroll-behavior: auto;
