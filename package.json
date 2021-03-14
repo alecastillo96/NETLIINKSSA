@@ -1,0 +1,19 @@
+{
+  "name": "netliinkssa",
+  "version": "1.0.1",
+  "description": "Web page for NETLIINKS S.A.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alecastillo96/NETLIINKSSA.git"
+  },
+  "author": "alejandrocordovafree@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alecastillo96/NETLIINKSSA/issues"
+  },
+  "homepage": "https://github.com/alecastillo96/NETLIINKSSA#readme"
+}
