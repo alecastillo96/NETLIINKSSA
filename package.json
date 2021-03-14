@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/alecastillo96/NETLIINKSSA/issues"
   },
-  "homepage": "https://github.com/alecastillo96/NETLIINKSSA#readme"
+  "homepage": "https://github.com/alecastillo96/NETLIINKSSA#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.14",
+    "gulp": "^4.0.2",
+    "gulp-dart-sass": "^1.0.2"
+  }
 }
