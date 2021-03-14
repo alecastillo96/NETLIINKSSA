@@ -1,0 +1,18 @@
+// ===========
+// CONTAINER
+// ===========
+
+.container {
+  padding: 32pt 32pt;
+  width: 100%;
+  max-width: 1360px;
+  margin: auto;
+
+  &--article {
+    background-color: $c-concrete;
+
+    &:nth-child(even) {
+      background-color: $white;
+    }
+  }
+}

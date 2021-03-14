@@ -1,0 +1,36 @@
+/* ------------------------------------------------ */
+/* ------------------- MENU BAR ------------------- */
+/* ------------------------------------------------ */
+
+.menu-bar {
+  display: block;
+  text-align: center;
+  width: 100%;
+  padding: {
+    top: 16pt;
+    left: 0pt;
+    bottom: 16pt;
+    right: 0pt;
+  };
+  position: sticky;
+  top: 0;
+  background-color: rgba($white, 0.9);
+  backdrop-filter: blur(8px) saturate(5);
+  -webkit-backdrop-filter: blur(8px) saturate(5);
+
+  ul { list-style: none; }
+  li { display: inline-block; }
+  a {
+    padding: 8pt 16pt;
+    color: $black-300;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  .showcase {
+    font-weight: bolder;
+    text-transform: uppercase;
+  }
+}

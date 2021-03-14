@@ -1,0 +1,25 @@
+/* -------------------------------------------- */
+/* ------------------- MODS ------------------- */
+/* -------------------------------------------- */
+[text-to-left] { text-align: left; }
+[text-to-right] { text-align: right; }
+
+[a-title-l] {
+  border-left: 8px solid $primary;
+  padding-left: 20px;
+}
+
+[a-title-r] {
+  border-right: 8px solid $primary;
+  padding-right: 20px;
+}
+
+::-moz-selection {
+  color: $white;
+  background: $primary;
+}
+
+::selection {
+  color: $white;
+  background: $primary;
+}

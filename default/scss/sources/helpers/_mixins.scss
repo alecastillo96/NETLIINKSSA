@@ -1,0 +1,11 @@
+@mixin gridbox {
+  display: grid;
+  grid-gap: 40pt;
+}
+
+@mixin gpadding ($top, $bottom, $left, $right) {
+  #{$top}: 32pt;
+  #{$bottom}: 32pt;
+  #{$left}: 0pt;
+  #{$right}: 0pt;
+}

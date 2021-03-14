@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-smoothing: all;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+
+/* Global configurations */
+html, body, input, p, h1, h2, h3, h4, h5, h6, table, br, div, a, img, form, button, video, img, article, aside, i, b, strong, abbr, acronym, applet, area, audio, base, basefont, bdo, big, blockquote, canvas, caption, center, cite, code, col, colgroup, command, datalist, dd, del, details, dfn, dialog, dir, div, dl, dt, em,embed, eventsource, fieldset, figcaption, figure, font, footer, frame, frameset, header, hgroup, hr, iframe, ins, isindex, kbd, keygen, label, legend, li, link, map, mark, menu, meta, meter, noframes, noscript, object, ol, optgroup, ul, option, output, param, pre, progress, q, rp, rt, ruby, s, samp, td, textarea, th, thead, time, title, tr, track, tt, u, ul, var, video, wbr {
+  transition: $anim-stack;
+  font-family: $font-stack;
+}
+
+html {
+  /* Scroll smooth animatio */
+  /* Not support in IE, or Safari */
+  scroll-behavior: smooth
+}
+
+h1, h2, h3, h4, h5, h6, b, strong {
+  color: $h-color;
+}
+
+p { color: $p-color; }
+
+a { text-decoration: none; }

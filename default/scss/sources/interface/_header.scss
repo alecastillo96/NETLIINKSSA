@@ -1,0 +1,32 @@
+// =======
+// HEADER
+// =======
+
+header {
+  display: flex;
+  display: -webkit-flex; /* For browsers with WEBKIT */
+  /* Vertical align to center */
+  align-items: center;
+  justify-content: center;
+  /* END */
+  text-align: center;
+  height: $medium-header-size;
+
+  background-color: rgba($black, 0.4);
+  background-image: url('../images/collin-armstrong-8FxJi5wuwKc-unsplash.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  -webkit-background-attachment: fixed;
+  background-blend-mode: multiply;
+
+  h1 {
+    color: $white;
+    font-size: $font-size-xl;
+    small {
+      font-size: $font-size-l;
+      font-weight: 200;
+      font-style: italic;
+    }
+  }
+}
