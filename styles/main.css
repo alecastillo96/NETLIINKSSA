@@ -34,8 +34,8 @@ body, html, input, button, table, form {
   font-family: 'Inter', sans-serif;
 }
 
-html, body, input, p, h1, h2, h3, h4, h5, h6, table, br, div, a, img, form, button, video, img, section, article, aside, i, b, strong, abbr, acronym, applet, area, audio, base, basefont, bdo, big, blockquote, canvas, caption, center, cite, code, col, colgroup, command, datalist, dd, del, details, dfn, dialog, dir, div, dl, dt, em,embed, eventsource, fieldset, figcaption, figure, font, footer, frame, frameset, header, hgroup, hr, iframe, ins, isindex, kbd, keygen, label, legend, li, link, map, mark, menu, meta, meter, noframes, noscript, object, ol, optgroup, ul, option, output, param, pre, progress, q, rp, rt, ruby, s, samp, section {
-  transition: .3s all ease;
+html, body, input, p, h1, h2, h3, h4, h5, h6, table, br, div, a, img, form, button, video, img, article, aside, i, b, strong, abbr, acronym, applet, area, audio, base, basefont, bdo, big, blockquote, canvas, caption, center, cite, code, col, colgroup, command, datalist, dd, del, details, dfn, dialog, dir, div, dl, dt, em,embed, eventsource, fieldset, figcaption, figure, font, footer, frame, frameset, header, hgroup, hr, iframe, ins, isindex, kbd, keygen, label, legend, li, link, map, mark, menu, meta, meter, noframes, noscript, object, ol, optgroup, ul, option, output, param, pre, progress, q, rp, rt, ruby, s, samp, td, textarea, th, thead, time, title, tr, track, tt, u, ul, var, video, wbr, .container  {
+  transition: .3s all cubic-bezier(0.72, 0.04, 0.42, 1.04);
 }
 
 /* No support in IE, or Safari */
@@ -123,7 +123,6 @@ header h1 small {
 .menu-bar a {
   padding: 8pt 16pt;
   color: #333;
-  transition: .3s all ease;
 }
 
 .menu-bar a:hover {
@@ -154,6 +153,7 @@ header h1 small {
 .article img {
   width: 100%;
   border-radius: 5px;
+  cursor: no-drop;
 }
 
 .article h3 {
@@ -257,6 +257,14 @@ header h1 small {
   padding-right: 20px;
 }
 
+/* ----------------------------------------------------- */
+/* ------------------- screen: 930px ------------------- */
+/* ----------------------------------------------------- */
+@media screen and (max-width: 1024px) {
+  .article .content {
+    margin-top: 0 !important;
+  }
+}
 
 /* ----------------------------------------------------- */
 /* ------------------- screen: 930px ------------------- */
