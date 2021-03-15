@@ -1,0 +1,25 @@
+/* ----------------------------------------------------- */
+/* ------------------- screen: 414px ------------------- */
+/* ----------------------------------------------------- */
+@media screen and (max-width: 414px) {
+  header {
+    height: 100vh;
+  }
+
+  header h1 {
+    font-size: 32pt;
+  }
+
+  header h1 small {
+    font-size: 22pt;
+  }
+
+  .container {
+    padding: 18pt;
+  }
+
+  .submit h1 {
+    font-size: 14pt;
+    line-height: 22pt;
+  }
+}

@@ -1,47 +1,44 @@
 @import 'stacks/HELPERS';
 @import 'stacks/INTERFACE';
-
 @import 'sources/helpers/mods';
+@import 'stacks/SCREENS';
 
-.submit {
-  @include gridbox;
-  grid-template-columns: 2fr 1.5fr;
-  background: rgba($primary, 0.13);
-
-  .message {
-    padding: 32pt 26pt;
+/* DARKMODE PARAMETERS */
+@media screen and (prefers-color-scheme: dark) {
+  html, body {
+    background-color: $darkcolor-base;
   }
 
-  h1 {
-    $fts: 24pt;
-    color: $primary;
-    font-size: $fts;
-    line-height: calc($fts * 1.900);
-    margin-bottom: 18pt;
+  .container--article {
+    background-color: $darkcolor-base;
   }
 
-  input {
-    &[type=email], &[type=submit] {
-      -webkit-appearance: none;
-      display: block;
-    }
-
-    &[type=email] {
-      width: 100%;
-      border-radius: 5px;
-      border: 1px solid $primary;
-      outline-color: $primary;
-      font-size: 18px;
-      padding: 5px;
-      margin: 14pt 0;
-    }
+  .container--article:nth-child(even) {
+    background-color: $darkcolor-secondary;
   }
 
-  .img4 {
-    background: {
-      image: url('../images/joanna-kosinska-uGcDWKN91Fs-unsplash.jpg');
-      size: cover;
-      position: center;
-    };
+  .container--article h3 {
+    color: $white;
+  }
+
+  .menu-bar {
+    background: rgba(20, 20, 20, 0.9);
+  }
+
+  .menu-bar a {
+    color: $white;
+  }
+
+  .submit {
+    background-color: $darkcolor-secondary !important;
+  }
+
+  .submit h1 {
+    color: rgba($white, 0.8);
+  }
+
+  .submit input[type=email] {
+    background-color: $darkcolor-base;
+    color: $white;
   }
 }

@@ -1,0 +1,56 @@
+.submit {
+  @include gridbox;
+  grid-template-columns: 2fr 1.5fr;
+  background: rgba($primary, 0.13);
+
+  .message {
+    padding: 32pt 26pt;
+  }
+
+  h1 {
+    $fts: 24pt;
+    color: $primary;
+    font-size: $fts;
+    line-height: calc($fts * 1.900);
+    margin-bottom: 18pt;
+  }
+
+  input {
+    &[type=email], &[type=submit] {
+      -webkit-appearance: none;
+      display: block;
+      border-radius: 5px;
+    }
+
+    &[type=email] {
+      width: 100%;
+      border: 1px solid $primary;
+      outline-color: $primary;
+      font-size: 18px;
+      padding: 5px;
+      margin: 14pt 0;
+    }
+
+    &[type=submit] {
+      border: none;
+      background-color: $primary;
+      color: $white;
+      padding: 6pt 15pt;
+      margin: 14pt 0;
+      font-size: 14px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: rgba($primary, 0.80);
+      }
+    }
+  }
+
+  .img4 {
+    background: {
+      image: url('../images/joanna-kosinska-uGcDWKN91Fs-unsplash.jpg');
+      size: cover;
+      position: center;
+    };
+  }
+}
