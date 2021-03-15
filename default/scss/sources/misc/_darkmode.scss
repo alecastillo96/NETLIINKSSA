@@ -1,0 +1,39 @@
+/* DARKMODE PARAMETERS */
+@media screen and (prefers-color-scheme: dark) {
+  html, body {
+    background-color: $darkcolor-base;
+  }
+
+  .container--article {
+    background-color: $darkcolor-base;
+  }
+
+  .container--article:nth-child(even) {
+    background-color: $darkcolor-secondary;
+  }
+
+  .container--article h3 {
+    color: $white;
+  }
+
+  .menu-bar {
+    background: rgba(20, 20, 20, 0.9);
+  }
+
+  .menu-bar a {
+    color: $white;
+  }
+
+  .submit {
+    background-color: $darkcolor-secondary !important;
+  }
+
+  .submit h1 {
+    color: rgba($white, 0.8);
+  }
+
+  .submit input[type=email] {
+    background-color: $darkcolor-base;
+    color: $white;
+  }
+}

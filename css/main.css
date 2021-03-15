@@ -216,6 +216,45 @@ header h1 small {
   background: #349589;
 }
 
+/* DARKMODE PARAMETERS */
+@media screen and (prefers-color-scheme: dark) {
+  html, body {
+    background-color: #151616;
+  }
+
+  .container--article {
+    background-color: #151616;
+  }
+
+  .container--article:nth-child(even) {
+    background-color: #1C1D1D;
+  }
+
+  .container--article h3 {
+    color: #FFF;
+  }
+
+  .menu-bar {
+    background: rgba(20, 20, 20, 0.9);
+  }
+
+  .menu-bar a {
+    color: #FFF;
+  }
+
+  .submit {
+    background-color: #1C1D1D !important;
+  }
+
+  .submit h1 {
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .submit input[type=email] {
+    background-color: #151616;
+    color: #FFF;
+  }
+}
 /* ----------------------------------------------------- */
 /* ------------------- screen: 1024px ------------------- */
 /* ----------------------------------------------------- */
@@ -365,44 +404,5 @@ header h1 small {
   .submit h1 {
     font-size: 14pt;
     line-height: 22pt;
-  }
-}
-/* DARKMODE PARAMETERS */
-@media screen and (prefers-color-scheme: dark) {
-  html, body {
-    background-color: #151616;
-  }
-
-  .container--article {
-    background-color: #151616;
-  }
-
-  .container--article:nth-child(even) {
-    background-color: #1C1D1D;
-  }
-
-  .container--article h3 {
-    color: #FFF;
-  }
-
-  .menu-bar {
-    background: rgba(20, 20, 20, 0.9);
-  }
-
-  .menu-bar a {
-    color: #FFF;
-  }
-
-  .submit {
-    background-color: #1C1D1D !important;
-  }
-
-  .submit h1 {
-    color: rgba(255, 255, 255, 0.8);
-  }
-
-  .submit input[type=email] {
-    background-color: #151616;
-    color: #FFF;
   }
 }
