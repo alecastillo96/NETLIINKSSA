@@ -216,6 +216,19 @@ header h1 small {
   background: #349589;
 }
 
+#about .wrapper {
+  height: 100vh;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.87), rgba(0, 0, 0, 0)), url("../images/Guayaquil.jpg");
+  background-position: center;
+  background-size: cover;
+}
+#about h1 {
+  font-size: 80px;
+  font-weight: 600;
+  line-heihgt: 1.05;
+  color: #FFF;
+}
+
 /* DARKMODE PARAMETERS */
 @media screen and (prefers-color-scheme: dark) {
   html, body {
