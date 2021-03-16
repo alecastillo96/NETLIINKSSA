@@ -185,6 +185,31 @@ header h1 small {
   background-position: center;
 }
 
+#about .wrapper {
+  height: 100vh;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.87), rgba(0, 0, 0, 0)), url("../images/Guayaquil.jpg");
+  background-position: center;
+  background-size: cover;
+}
+#about h1 {
+  font-size: 80px;
+  font-weight: 600;
+  line-heihgt: 1.05;
+  color: #FFF;
+}
+#about button {
+  display: block;
+  margin-top: 20px;
+  background: transparent;
+  border: 1px solid #FFF;
+  border-radius: 5px;
+  padding: 10px 20px;
+  color: white;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
 /* -------------------------------------------- */
 /* ------------------- MODS ------------------- */
 /* -------------------------------------------- */
@@ -214,31 +239,6 @@ header h1 small {
 ::selection {
   color: #FFF;
   background: #349589;
-}
-
-#about .wrapper {
-  height: 100vh;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.87), rgba(0, 0, 0, 0)), url("../images/Guayaquil.jpg");
-  background-position: center;
-  background-size: cover;
-}
-#about h1 {
-  font-size: 80px;
-  font-weight: 600;
-  line-heihgt: 1.05;
-  color: #FFF;
-}
-#about button {
-  display: block;
-  margin-top: 20px;
-  background: transparent;
-  border: 1px solid #FFF;
-  border-radius: 5px;
-  padding: 10px 20px;
-  color: white;
-  font-size: 14px;
-  text-transform: uppercase;
-  letter-spacing: 0.8px;
 }
 
 /* DARKMODE PARAMETERS */
