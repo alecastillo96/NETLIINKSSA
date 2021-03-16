@@ -228,6 +228,18 @@ header h1 small {
   line-heihgt: 1.05;
   color: #FFF;
 }
+#about button, #about .btn {
+  display: block;
+  border: 1px solid #FFF;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background: transparent;
+  color: white;
+}
+#about button + *, #about .btn + * {
+  margin-top: 20px;
+}
 
 /* DARKMODE PARAMETERS */
 @media screen and (prefers-color-scheme: dark) {
