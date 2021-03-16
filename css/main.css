@@ -236,6 +236,9 @@ header h1 small {
   border-radius: 5px;
   padding: 10px 20px;
   color: white;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
 }
 
 /* DARKMODE PARAMETERS */
