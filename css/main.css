@@ -21,11 +21,11 @@ html {
 }
 
 h1, h2, h3, h4, h5, h6, b, strong {
-  color: #333;
+  color: #333333;
 }
 
 p {
-  color: #777;
+  color: #777777;
 }
 
 a {
@@ -85,7 +85,7 @@ header h1 small {
 }
 .menu-bar a {
   padding: 8pt 16pt;
-  color: #333;
+  color: #333333;
 }
 .menu-bar a:hover {
   color: #349589;
