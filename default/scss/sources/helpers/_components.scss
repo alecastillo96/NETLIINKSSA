@@ -23,3 +23,29 @@
   color: $white;
   background: $primary;
 }
+
+#breadcrumb {
+  position: absolute;
+  width: 100%;
+  background-color: rgba($white, 0.0);
+  padding: 10px;
+
+  a {
+    padding: 0px 5px;
+    text-transform: uppercase;
+    font-size: 11px;
+
+    &:nth-child(n):before {
+      content: '>';
+      margin-right: 10px
+    }
+
+    &:nth-last-child(1) {
+      color: $white;
+    }
+
+    &:hover {
+      color: hsl(10, 0%, 90%);
+    }
+  }
+}

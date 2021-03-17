@@ -26,4 +26,33 @@ h1, h2, h3, h4, h5, h6, b, strong {
 
 p { color: $p-color; }
 
-a { text-decoration: none; }
+a { 
+  text-decoration: none;
+  color: $primary;
+}
+
+p a {
+  background-color: rgba($primary, 0.8);
+  color: $white;
+  padding: {
+    left: 5px;
+    right: 5px;
+    bottom: 2px;
+  };
+  border-radius: 5px;
+  box-shadow: 0px 0px 2px rgba($dark-mode-gray-70, 0.5)
+}
+
+
+.typography-hero {
+  font-size: 60px;
+  font-weight: bolder;
+  line-heihgt: 1.05;
+}
+
+.typography-hero-copy {
+  font-size: 22px;
+  line-height: 1.5;
+  font-weight: 400;
+  letter-spacing: .007em;
+}

@@ -6,25 +6,18 @@
       position: center;
       size: cover;
     };
+    display: flex;
+    display: -webkit-flex;
   }
 
   h1 {
-    font-size: 80px;
     font-weight: 600;
     line-heihgt: 1.05;
     color: $white;
   }
 
-  button {
-    display: block;
+  p {
     margin-top: 20px;
-    background: transparent;
-    border: 1px solid $white;
-    border-radius: 5px;
-    padding: 10px 20px;
-    color: white;
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 0.8px;
+    color: $white;
   }
 }
