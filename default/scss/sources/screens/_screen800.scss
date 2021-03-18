@@ -78,4 +78,20 @@
     border-right: none;
     padding-left: 20px;
   }
+
+  /* --------------------------------------------------- */
+  /* ------------------- About ------------------------- */
+  /* --------------------------------------------------- */
+  .typography-hero {
+    font-size: 56px;
+    font-weight: bolder;
+    line-heihgt: 1.05;
+  }
+
+  .typography-hero-copy {
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 400;
+    letter-spacing: .007em;
+  }
 }

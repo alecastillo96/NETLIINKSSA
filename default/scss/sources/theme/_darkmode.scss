@@ -1,15 +1,19 @@
 /* DARKMODE PARAMETERS */
 @media screen and (prefers-color-scheme: dark) {
   html, body {
-    background-color: $darkcolor-base;
+    background-color: $dark-color-base;
+  }
+
+  p {
+    color: $dark-color-text;
   }
 
   .container--article {
-    background-color: $darkcolor-base;
+    background-color: $dark-color-base;
   }
 
   .container--article:nth-child(even) {
-    background-color: $darkcolor-secondary;
+    background-color: $dakr-color-foreground;
   }
 
   .container--article h3 {
@@ -25,7 +29,7 @@
   }
 
   .submit {
-    background-color: $darkcolor-secondary !important;
+    background-color: $dakr-color-foreground !important;
   }
 
   .submit h1 {
@@ -33,7 +37,7 @@
   }
 
   .submit input[type=email] {
-    background-color: $darkcolor-base;
+    background-color: $dark-color-base;
     color: $white;
   }
 

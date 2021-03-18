@@ -292,6 +292,10 @@ button, input[type=button], input[type=submit] {
     background-color: #151616;
   }
 
+  p {
+    color: #81858B;
+  }
+
   .container--article {
     background-color: #151616;
   }
@@ -449,12 +453,61 @@ button, input[type=button], input[type=submit] {
     border-right: none;
     padding-left: 20px;
   }
+
+  /* --------------------------------------------------- */
+  /* ------------------- About ------------------------- */
+  /* --------------------------------------------------- */
+  .typography-hero {
+    font-size: 56px;
+    font-weight: bolder;
+    line-heihgt: 1.05;
+  }
+
+  .typography-hero-copy {
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 400;
+    letter-spacing: 0.007em;
+  }
 }
+/* --------------------------------------------------- */
+/* ------------------- 700px ------------------------- */
+/* --------------------------------------------------- */
+@media screen and (max-width: 700px) {
+  /* --------------------------------------------------- */
+  /* ------------------- About ------------------------- */
+  /* --------------------------------------------------- */
+  .typography-hero {
+    font-size: 38px;
+    font-weight: bolder;
+    line-heihgt: 1.05;
+  }
+
+  .typography-hero-copy {
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 400;
+    letter-spacing: 0.007em;
+  }
+}
+.resp {
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.resp .hamb {
+  align-self: flex-start;
+}
+.resp .showcase {
+  align-self: flex-end;
+}
+
 /* ----------------------------------------------------- */
 /* ------------------- screen: 600px ------------------- */
 /* ----------------------------------------------------- */
 @media screen and (max-width: 600px) {
-  .menu-bar ul {
+  .landd {
     display: none;
   }
 
