@@ -119,6 +119,10 @@ header h1 small {
   text-transform: uppercase;
 }
 
+.resp {
+  display: none;
+}
+
 .container {
   padding: 32pt 32pt;
   width: 100%;
@@ -489,33 +493,33 @@ button, input[type=button], input[type=submit] {
     font-weight: 400;
     letter-spacing: 0.007em;
   }
-}
-.resp {
-  display: flex;
-  display: -webkit-flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.resp .hamb {
-  align-self: flex-start;
-}
-.resp .showcase {
-  align-self: flex-end;
-}
 
-/* ----------------------------------------------------- */
-/* ------------------- screen: 600px ------------------- */
-/* ----------------------------------------------------- */
-@media screen and (max-width: 600px) {
+  .resp {
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .resp .hamb {
+    align-self: flex-start;
+  }
+  .resp .showcase {
+    align-self: flex-end;
+  }
+
   .landd {
     display: none;
   }
 
-  .mobile-spacing {
-    display: block;
-    padding-top: 10px;
-    padding-bottom: 10px;
+  .menu-bar {
+    border-bottom: 1px solid black;
   }
+}
+/* ----------------------------------------------------- */
+/* ------------------- screen: 600px ------------------- */
+/* ----------------------------------------------------- */
+@media screen and (max-width: 600px) {
+  /* Add options here */
 }
 /* ----------------------------------------------------- */
 /* ------------------- screen: 414px ------------------- */
