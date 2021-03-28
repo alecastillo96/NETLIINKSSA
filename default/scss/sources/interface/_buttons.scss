@@ -5,13 +5,10 @@ button, input[type=button], input[type=submit] {
     border: 0px solid rgba($white, 0.4);
     border-radius: 5px;
     padding: 10px 20px;
-    color: white;
     font-size: 14px;
     font-weight: 600;
     letter-spacing: 0.8px;
     cursor: pointer;
     transition: .3s all ease-in;
     text-transform: uppercase;
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
 }

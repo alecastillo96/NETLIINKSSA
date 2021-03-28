@@ -10,20 +10,15 @@ block content
         small Networking &amp; security
 
   nav.menu-bar
-    ul.landd
+    a(href="https://alecastillo96.github.io/NETLIINKSSA/", class="showcaseResp") Netliinks
+    .toggle(onclick='toggleMenu()', role='button')
+
+    ul.navigation
       li <a href="services.html">Servicios</a>
       li <a href="activities.html">Actividades</a>
-      li <a href="https://alecastillo96.github.io/NETLIINKSSA/" class="showcase">Netliinks</a>
+      li.showcase <a href="https://alecastillo96.github.io/NETLIINKSSA/">Netliinks</a>
       li <a href="about.html">Acerca de</a>
       li <a href="contact.html">Contacto</a>
-
-    ul.resp
-      li
-        a(href="#", class="hamb") 🍔
-      li
-        a(href="#", class="showcase") Netliinks
-
-  div.mobile-spacing
 
   div.container.container--article#security
     div.article
@@ -43,7 +38,7 @@ block content
     div.article
       img(src='images/elly-brian-s_C8yBxJyvM-unsplash.jpg', alt='NETLIINKS SECURITY' class='flex-item')
       div.content
-        h3.text-to-left.a-title-l Soporte <br> técnico
+        h3(text-to-left a-title-l) Soporte <br> técnico
         p.text-to-left quid securi etiam tamquam eu fugiat nulla pariatur. Mercedem aut nummos unde unde extricat, amaras. Fabio vel iudice vincam, sunt in culpa qui officia. Quisque placerat facilisis egestas cillum dolore. Morbi fringilla convallis sapien, id pulvinar odio volutpat.
 
   div.container
@@ -58,3 +53,5 @@ block content
             value='Suscribirse'
           )
       div.img4
+  script(type="text/javascript")
+    include script.js

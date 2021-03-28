@@ -2,6 +2,7 @@
   @include gridbox;
   grid-template-columns: 2fr 1.5fr;
   background: rgba($primary, 0.13);
+  display: block;
 
   .message {
     padding: 32pt 26pt;
