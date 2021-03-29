@@ -133,6 +133,7 @@ header h1 small {
 }
 .container--article {
   background-color: #F2F2F2;
+  border-radius: 20px;
 }
 .container--article:nth-child(even) {
   background-color: #FFF;
@@ -170,38 +171,13 @@ header h1 small {
 }
 
 .submit {
-  display: grid;
-  grid-gap: 40pt;
-  grid-template-columns: 2fr 1.5fr;
-  background: rgba(52, 149, 137, 0.13);
+  margin-top: 50px;
+  background-color: rgba(52, 149, 137, 0.05);
+}
+.submit .newsletterIcon {
   display: block;
-}
-.submit .message {
-  padding: 32pt 26pt;
-}
-.submit h1 {
-  color: #349589;
-  font-size: 24pt;
-  line-height: calc($fts * 1.900);
-  margin-bottom: 18pt;
-}
-.submit input[type=email], .submit input[type=submit] {
-  -webkit-appearance: none;
-  display: block;
-  border-radius: 5px;
-}
-.submit input[type=email] {
-  width: 100%;
-  border: 1px solid #349589;
-  outline-color: #349589;
-  font-size: 18px;
-  padding: 5px;
-  margin: 14pt 0;
-}
-.submit .img4 {
-  background-image: url("../images/joanna-kosinska-uGcDWKN91Fs-unsplash.jpg");
-  background-size: cover;
-  background-position: center;
+  margin: 30px auto;
+  width: 200px;
 }
 
 button, input[type=button], input[type=submit] {
@@ -302,6 +278,7 @@ button, input[type=button], input[type=submit] {
 
   .container--article {
     background-color: #151616;
+    border-radius: 0;
   }
 
   .container--article:nth-child(even) {
@@ -355,6 +332,11 @@ button, input[type=button], input[type=submit] {
   }
   .toggle.active {
     filter: invert(0) !important;
+  }
+}
+@media screen and (max-width: 1364px) {
+  .container--article {
+    border-radius: 0 !important;
   }
 }
 /* ----------------------------------------------------- */
@@ -483,6 +465,10 @@ button, input[type=button], input[type=submit] {
     line-height: 1.5;
     font-weight: 400;
     letter-spacing: 0.007em;
+  }
+
+  .container--article {
+    border-radius: 0;
   }
 }
 /* --------------------------------------------------- */

@@ -19,7 +19,9 @@ block content
       li.showcase <a href="https://alecastillo96.github.io/NETLIINKSSA/">Netliinks</a>
       li <a href="about.html">Acerca de</a>
       li <a href="contact.html">Contacto</a>
+
   div
+
   div.container.container--article#security
     div.article
       img(src='images/milosz-klinowski-BW0d0IllW8E-unsplash.jpg', alt='NETLIINKS SECURITY' class='flex-item')
@@ -41,9 +43,10 @@ block content
         h3(text-to-left a-title-l) Soporte <br> técnico
         p.text-to-left quid securi etiam tamquam eu fugiat nulla pariatur. Mercedem aut nummos unde unde extricat, amaras. Fabio vel iudice vincam, sunt in culpa qui officia. Quisque placerat facilisis egestas cillum dolore. Morbi fringilla convallis sapien, id pulvinar odio volutpat.
 
-  div.container
-    div.submit
+  div.submit
+    div.container
       div.message
+        img(src="images/newsletter.png", class="newsletterIcon")
         h1  Suscríbete para recibir las últimas noticias y ofertas
 
         form(action='POST')
@@ -53,6 +56,6 @@ block content
             value='Suscribirse'
           )
 
-      div.img4
+
   script(type="text/javascript")
     include script.js

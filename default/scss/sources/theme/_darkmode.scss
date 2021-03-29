@@ -10,6 +10,7 @@
 
   .container--article {
     background-color: $dark-color-base;
+    border-radius: 0;
   }
 
   .container--article:nth-child(even) {

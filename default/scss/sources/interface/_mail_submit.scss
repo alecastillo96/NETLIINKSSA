@@ -1,43 +1,11 @@
 .submit {
-  @include gridbox;
-  grid-template-columns: 2fr 1.5fr;
-  background: rgba($primary, 0.13);
-  display: block;
+  margin-top: 50px;
+  background-color: rgba($primary, 0.05);
 
-  .message {
-    padding: 32pt 26pt;
+  .newsletterIcon {
+    display: block;
+    margin: 30px auto;
+    width: 200px;
   }
 
-  h1 {
-    $fts: 24pt;
-    color: $primary;
-    font-size: $fts;
-    line-height: calc($fts * 1.900);
-    margin-bottom: 18pt;
-  }
-
-  input {
-    &[type=email], &[type=submit] {
-      -webkit-appearance: none;
-      display: block;
-      border-radius: 5px;
-    }
-
-    &[type=email] {
-      width: 100%;
-      border: 1px solid $primary;
-      outline-color: $primary;
-      font-size: 18px;
-      padding: 5px;
-      margin: 14pt 0;
-    }
-  }
-
-  .img4 {
-    background: {
-      image: url('../images/joanna-kosinska-uGcDWKN91Fs-unsplash.jpg');
-      size: cover;
-      position: center;
-    };
-  }
 }
