@@ -1,11 +1,22 @@
 .submit {
   margin-top: 50px;
   background-color: rgba($primary, 0.05);
+  text-align: center;
 
   .newsletterIcon {
     display: block;
-    margin: 30px auto;
+    margin: 35px auto;
     width: 200px;
+  }
+
+  h1 {
+    text-transform: uppercase;
+    font-size: 2.8em;
+    font-weight: bolder;
+  }
+
+  p {
+    font-size: 1.2em;
   }
 
 }

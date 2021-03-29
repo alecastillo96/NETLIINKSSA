@@ -3,6 +3,8 @@ const sass        = require('gulp-dart-sass');
 const pug         = require('gulp-pug-3');
 const browserSync = require('browser-sync').create();
 const imagemin    = require('gulp-imagemin');
+const minCss =  require('gulp-clean-css');
+const autoPrefixer =  require('gulp-clean-css');
 
 function minifyImg() {
   gulp.src('default/images/*')
@@ -14,6 +16,9 @@ function minifyImg() {
 function compileSass() {
   return gulp.src('./default/scss/**/*.scss')
     .pipe(sass())
+    .pipe(autoPrefixer({
+      browsers: ['last 2 versions'],
+    }))
     .pipe(gulp.dest('./css'))
     .pipe(browserSync.stream());
 }
