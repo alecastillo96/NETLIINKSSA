@@ -9,9 +9,10 @@
 }
 
 /* Global configurations */
-html, body, input, p, h1, h2, h3, h4, h5, h6, table, br, div, a, img, form, button, video, img, article, aside, i, b, strong, abbr, acronym, applet, area, audio, base, basefont, bdo, big, blockquote, canvas, caption, center, cite, code, col, colgroup, command, datalist, dd, del, details, dfn, dialog, dir, div, dl, dt, em, embed, eventsource, fieldset, figcaption, figure, font, footer, frame, frameset, header, hgroup, hr, iframe, ins, isindex, kbd, keygen, label, legend, li, link, map, mark, menu, meta, meter, noframes, noscript, object, ol, optgroup, ul, option, output, param, pre, progress, q, rp, rt, ruby, s, samp, td, textarea, th, thead, time, title, tr, track, tt, u, ul, var, video, wbr {
+html, a, p, h1, h2, h3, h4, div, span, button, input {
   transition: 0.3s all ease;
   font-family: "Inter", sans-serif;
+  -webkit-appearance: none;
 }
 
 html {
@@ -174,6 +175,7 @@ header h1 small {
   margin-top: 50px;
   background-color: rgba(52, 149, 137, 0.05);
   text-align: center;
+  position: relative;
 }
 .submit .newsletterIcon {
   display: block;
@@ -189,19 +191,72 @@ header h1 small {
   font-size: 1.2em;
 }
 
-button, input[type=button], input[type=submit] {
-  display: block;
-  margin-top: 25px;
-  background: rgba(52, 149, 137, 0.8);
-  border: 0px solid rgba(255, 255, 255, 0.4);
-  border-radius: 5px;
-  padding: 10px 20px;
+.submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.message {
+  position: relative;
+  width: 500px;
+  padding: 40px;
+}
+
+.input-field {
+  position: relative;
+  height: 40px;
+  width: 100%;
+  margin: auto;
+}
+.input-field input[type=text] {
+  position: absolute;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  font-size: 16px;
+  width: 100%;
+}
+.input-field input[type=text]:focus + label, .input-field input[type=text]:valid + label {
+  transform: translateY(-35px);
   font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 0.8px;
-  cursor: pointer;
-  transition: 0.3s all ease-in;
-  text-transform: uppercase;
+  color: #FFF;
+  background: red;
+  padding: 2px 6px;
+}
+.input-field label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  display: block;
+  transition: 0.5s;
+}
+.input-field span {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: block;
+  background: green;
+  width: 100%;
+  height: 2px;
+}
+.input-field span::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #00b0FF;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s all ease-in-out;
+}
+.input-field:focus + span::before, .input-field:valid + span::before {
+  transform: scaleX(1);
+  transform-origin: right;
+  transition: transform 0.5s all ease-in-out;
 }
 
 #about .wrapper {

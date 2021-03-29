@@ -54,9 +54,12 @@
         <div class="message">
           <h1>suscríbete</h1>
           <p>suscríbete a nuestro newsletter y mantente actualizado</p><img class="newsletterIcon" src="images/newsletter.png">
-          <form action="POST">
-            <input type="email">
-            <input type="submit" value="Suscribirse">
+          <form>
+            <div class="input-field">
+              <input type="text" name="" required="">
+              <label>Por favor, ingrese su email</label><span></span>
+            </div>
+            <input type="submit" value="enviar">
           </form>
         </div>
       </div>
@@ -67,6 +70,8 @@
 	menuToggle.classList.toggle('active')
 	navigation.classList.toggle('active')
 }
+
+feather.replace();
     </script>
   </body>
 </html>

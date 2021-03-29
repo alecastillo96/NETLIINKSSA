@@ -2,6 +2,7 @@
   margin-top: 50px;
   background-color: rgba($primary, 0.05);
   text-align: center;
+  position: relative;
 
   .newsletterIcon {
     display: block;
@@ -18,5 +19,4 @@
   p {
     font-size: 1.2em;
   }
-
 }

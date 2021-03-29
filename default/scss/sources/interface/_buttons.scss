@@ -1,14 +1,73 @@
-button, input[type=button], input[type=submit] {
-    display: block;
-    margin-top: 25px;
-    background: rgba($primary, 0.8);
-    border: 0px solid rgba($white, 0.4);
-    border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 0.8px;
-    cursor: pointer;
-    transition: .3s all ease-in;
-    text-transform: uppercase;
+.submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.message {
+    position: relative;
+    width: 500px;
+    padding: 40px;
+}
+
+.input-field {
+    position: relative;
+    height: 40px;
+    width: 100%;
+    margin: auto;
+
+    input[type=text] {
+        position: absolute;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        font-size: 16px;
+        width: 100%;
+
+        &:focus + label, &:valid + label {
+            transform: translateY(-35px);
+            font-size: 14px;
+            color: $white;
+            background: red;
+            padding: 2px 6px;
+        }
+    }
+
+    label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        display: block;
+        transition: 0.5s;
+    }
+
+    span {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        display: block;
+        background: green;
+        width: 100%;
+        height: 2px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #00b0FF;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.5s all ease-in-out;
+        }
+    }
+
+    &:focus + span::before, &:valid + span::before {
+        transform: scaleX(1);
+        transform-origin: right;
+        transition: transform 0.5s all ease-in-out;
+    }
 }

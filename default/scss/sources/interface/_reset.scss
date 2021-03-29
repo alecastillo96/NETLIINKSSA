@@ -9,9 +9,10 @@
 }
 
 /* Global configurations */
-html, body, input, p, h1, h2, h3, h4, h5, h6, table, br, div, a, img, form, button, video, img, article, aside, i, b, strong, abbr, acronym, applet, area, audio, base, basefont, bdo, big, blockquote, canvas, caption, center, cite, code, col, colgroup, command, datalist, dd, del, details, dfn, dialog, dir, div, dl, dt, em,embed, eventsource, fieldset, figcaption, figure, font, footer, frame, frameset, header, hgroup, hr, iframe, ins, isindex, kbd, keygen, label, legend, li, link, map, mark, menu, meta, meter, noframes, noscript, object, ol, optgroup, ul, option, output, param, pre, progress, q, rp, rt, ruby, s, samp, td, textarea, th, thead, time, title, tr, track, tt, u, ul, var, video, wbr {
+html, a, p, h1, h2, h3, h4, div, span, button, input{
   transition: $animation-basic;
   font-family: $font-stack;
+  -webkit-appearance: none;
 }
 
 html {
@@ -56,3 +57,4 @@ p a {
   font-weight: 400;
   letter-spacing: .007em;
 }
+

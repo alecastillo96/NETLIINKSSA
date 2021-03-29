@@ -50,12 +50,12 @@ block content
         p suscríbete a nuestro newsletter y mantente actualizado
         img(src="images/newsletter.png", class="newsletterIcon")
 
-        form(action='POST')
-          input(type='email')
-          input(
-            type='submit',
-            value='Suscribirse'
-          )
+        form
+          div.input-field
+            input(type='text', name='', required='')
+            label Por favor, ingrese su email
+            span
+          input(type='submit', value='enviar')
 
 
   script(type="text/javascript")
