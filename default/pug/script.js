@@ -6,3 +6,11 @@ function toggleMenu() {
 }
 
 feather.replace();
+
+
+function onclick() {
+	let subsSuccess  = document.querySelector('.success');
+	if (subsSuccess > 0) {
+		alert('Sies')
+	}
+}

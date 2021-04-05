@@ -46,17 +46,16 @@ block content
   div.submit
     div.container
       div.message
-        h1 suscríbete
-        p suscríbete a nuestro newsletter y mantente actualizado
         img(src="images/newsletter.png", class="newsletterIcon")
+        h1 suscríbete
+        p Suscríbete a nuestro newsletter y mantente actualizado
 
         form
           div.input-field
-            input(type='text', name='', required='')
+            input(type='email', name='', required='', class='success')
             label Por favor, ingrese su email
             span
           input(type='submit', value='enviar')
-
 
   script(type="text/javascript")
     include script.js

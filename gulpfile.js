@@ -6,14 +6,14 @@ const imagemin    = require('gulp-imagemin');
 const minCss =  require('gulp-clean-css');
 const autoPrefixer =  require('gulp-clean-css');
 
-function minifyImg() {
+const minifyImg = () => {
   gulp.src('default/images/*')
     .pipe(imagemin())
     .pipe(gulp.dest('./images/'))
 }
 
 // Compile into CSS
-function compileSass() {
+const compileSass = () => {
   return gulp.src('./default/scss/**/*.scss')
     .pipe(sass())
     .pipe(autoPrefixer({
@@ -24,7 +24,7 @@ function compileSass() {
 }
 
 // Compile into HTML
-function compilePug() {
+const compilePug = () => {
   return gulp.src('./default/pug/*.pug')
     .pipe(pug({
       pretty: true
@@ -34,7 +34,7 @@ function compilePug() {
 }
 
 // Browser reload on change
-function watch() {
+const watch = () => {
   browserSync.init({
     server: {
       baseDir: './'

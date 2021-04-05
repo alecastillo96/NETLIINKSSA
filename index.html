@@ -51,12 +51,12 @@
     </div>
     <div class="submit">
       <div class="container">
-        <div class="message">
+        <div class="message"><img class="newsletterIcon" src="images/newsletter.png">
           <h1>suscríbete</h1>
-          <p>suscríbete a nuestro newsletter y mantente actualizado</p><img class="newsletterIcon" src="images/newsletter.png">
+          <p>Suscríbete a nuestro newsletter y mantente actualizado</p>
           <form>
             <div class="input-field">
-              <input type="text" name="" required="">
+              <input class="success" type="email" name="" required="">
               <label>Por favor, ingrese su email</label><span></span>
             </div>
             <input type="submit" value="enviar">
@@ -72,6 +72,14 @@
 }
 
 feather.replace();
+
+
+function onclick() {
+	let subsSuccess  = document.querySelector('.success');
+	if (subsSuccess > 0) {
+		alert('Sies')
+	}
+}
     </script>
   </body>
 </html>
