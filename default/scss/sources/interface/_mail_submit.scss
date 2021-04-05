@@ -5,6 +5,7 @@
     flex-direction: row;
     text-align: center;
     position: relative;
+    width: 100%;
 
     .newsletterIcon {
       display: block;
@@ -22,14 +23,14 @@
 
     p {
       font-size: 1.2em;
-      color: $primary;
+      color: $p-color;
       margin-bottom: 60px;
     }
 }
 
 .message {
     position: relative;
-    width: 500px;
+    width: auto;
     padding: 40px;
     margin: auto;
     background-color: $c-concrete;

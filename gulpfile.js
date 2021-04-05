@@ -5,7 +5,8 @@ const browserSync = require('browser-sync').create();
 const imagemin    = require('gulp-imagemin');
 const minCss =  require('gulp-clean-css');
 const babel = require('gulp-babel');
-const autoPrefixer =  require('gulp-clean-css');
+const cleancss =  require('gulp-clean-css');
+const autoprefixer = require('gulp-autoprefixer');
 
 const minifyImg = () => {
   gulp.src('default/images/*')
@@ -17,8 +18,8 @@ const minifyImg = () => {
 const compileSass = () => {
   return gulp.src('./default/scss/**/*.scss')
     .pipe(sass())
-    .pipe(autoPrefixer({
-      browsers: ['last 2 versions'],
+    .pipe(autoprefixer({
+      overrideBrowserslist: ['last 2 versions'],
     }))
     .pipe(gulp.dest('./css'))
     .pipe(browserSync.stream());

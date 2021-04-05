@@ -28,7 +28,6 @@
   #ti {
     margin-bottom: 20px;
     backdrop-filter: saturate(50px);
-    -webkit-backdrop-filter: saturate(50px);
   }
 
   #security { background-image: url('../images/milosz-klinowski-BW0d0IllW8E-unsplash.jpg'); }
@@ -77,25 +76,5 @@
     border-left: 8px solid $primary;
     border-right: none;
     padding-left: 20px;
-  }
-
-  /* --------------------------------------------------- */
-  /* ------------------- About ------------------------- */
-  /* --------------------------------------------------- */
-  .typography-hero {
-    font-size: 56px;
-    font-weight: bolder;
-    line-heihgt: 1.05;
-  }
-
-  .typography-hero-copy {
-    font-size: 18px;
-    line-height: 1.5;
-    font-weight: 400;
-    letter-spacing: .007em;
-  }
-
-  .container--article {
-    border-radius: 0;
   }
 }
