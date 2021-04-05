@@ -21,7 +21,17 @@
 
 ::selection {
   color: $white;
-  background: $primary;
+  background: rgba($primary, 0.5);
+}
+
+.blink {
+  animation: blinker 3s cubic-bezier(.5, 0, 1, 1) infinite;
+}
+
+@keyframes blinker {
+  to {
+    opacity: 0;
+  }
 }
 
 #breadcrumb {

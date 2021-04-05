@@ -1,0 +1,12 @@
+extends templates/maintemplt.pug
+
+block title 
+  title Error 404 | Este recurso no ha sido encontrado
+
+block content
+  .content-center
+    div 
+      .code-error.blink 404
+      .error-message Esta página no existe o no está disponible en este momento
+
+      a(href="index.html" role="button" class="backFromErrorButton") Regresar al inicio
