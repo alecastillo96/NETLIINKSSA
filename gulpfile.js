@@ -29,7 +29,7 @@ const Babel = () => {
     .pipe(babel({
       presets: ['@babel/env']
     }))
-    .pipe(gulp.dest('.scripts/'))
+    .pipe(gulp.dest('./scripts/'))
 }
 
 // Compile into HTML

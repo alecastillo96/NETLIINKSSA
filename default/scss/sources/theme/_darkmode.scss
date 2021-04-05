@@ -36,25 +36,7 @@
   .submit h1 {
     color: rgba($white, 0.8);
   }
-
-  .submit input[type=email] {
-    background-color: $dark-color-base;
-    color: $white;
-  }
-
-  button, input[type=submit], input[type=button] {
-    display: block;
-    margin-top: 25px;
-    background: transparent;
-    border: 1px solid $white;
-    border-radius: 5px;
-    padding: 10px 20px;
-    color: white;
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 0.8px;
-  }
-
+  
   .navigation.active {
     background-color: $dark-mode-gray-100 !important;
   }
