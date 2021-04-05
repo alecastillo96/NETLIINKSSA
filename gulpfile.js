@@ -4,6 +4,7 @@ const pug         = require('gulp-pug-3');
 const browserSync = require('browser-sync').create();
 const imagemin    = require('gulp-imagemin');
 const minCss =  require('gulp-clean-css');
+const babel = require('gulp-babel');
 const autoPrefixer =  require('gulp-clean-css');
 
 const minifyImg = () => {
@@ -21,6 +22,14 @@ const compileSass = () => {
     }))
     .pipe(gulp.dest('./css'))
     .pipe(browserSync.stream());
+}
+
+const Babel = () => {
+  return gulp.src('./default/babel/*.js')
+    .pipe(babel({
+      presets: ['@babel/env']
+    }))
+    .pipe(gulp.dest('.scripts/'))
 }
 
 // Compile into HTML
@@ -44,6 +53,7 @@ const watch = () => {
   gulp.watch('./default/scss/**/*.scss', compileSass);
   gulp.watch('./default/images/*', minifyImg);
   gulp.watch('./default/pug/*.pug', compilePug);
+  gulp.watch('./default/babel/*.js', Babel);
   gulp.watch('./*.html').on('change', browserSync.reload);
   gulp.watch('./js/**/*.js').on('change', browserSync.reload)
 }
