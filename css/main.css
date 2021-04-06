@@ -201,8 +201,11 @@ header h1 small {
 }
 .submit .newsletterIcon {
   display: block;
-  margin: 35px auto;
-  width: 200px;
+  margin-top: 10px;
+  margin-bottom: 35px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 180px;
 }
 .submit h1 {
   text-transform: uppercase;
@@ -222,6 +225,11 @@ header h1 small {
   margin: auto;
   background-color: #F2F2F2;
   border-radius: 20px;
+}
+.message form {
+  display: block;
+  width: 500px;
+  margin: auto;
 }
 
 .input-field {
@@ -301,8 +309,64 @@ header h1 small {
   transition: transform 0.5s all ease-in-out, -webkit-transform 0.5s all ease-in-out;
 }
 
-.button, .btn, input[type=button], input[type=submit] {
+.button, .btn, button, input[type=submit] {
+  display: inline-block;
   cursor: pointer;
+  font-family: "Inter", sans-serif;
+  font-weight: bolder;
+  overflow: hidden;
+  text-transform: uppercase;
+  border: 1px solid;
+}
+
+.button-primary, .btn-primary {
+  background-color: rgba(59, 196, 178, 0.4);
+  border-color: #3BC4B2 !important;
+}
+
+.button_small, .btn_small {
+  font-size: 0.75rem;
+  height: 1.875rem;
+  line-height: calc(1.875rem - 1px * 2);
+  border-radius: 0.25rem;
+  padding: 0 1rem;
+}
+
+.button_mid, .btn_mid {
+  font-size: 0.875rem;
+  height: 2.5rem;
+  line-height: calc(2.5rem - 1px * 2);
+  border-radius: 0.25rem;
+  padding: 0 1.25rem;
+}
+
+.button_large, .btn_large {
+  font-size: 1rem;
+  height: 3.125rem;
+  line-height: calc(1.875rem - 1px * 2);
+  border-radius: 0.25rem;
+  padding: 0 1.75rem;
+}
+
+#about .pdf {
+  display: block;
+  height: 100%;
+  width: 50px;
+}
+#about p {
+  font-size: 11px;
+  text-transform: uppercase;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+#about .archPeso {
+  color: #FFF;
+  font-size: 12px;
+  text-transform: uppercase;
+  width: 50px;
+  padding: 2px 8px;
+  background: rgba(59, 196, 178, 0.8);
+  border-radius: 3px;
 }
 
 .content-center {
@@ -470,6 +534,13 @@ header h1 small {
 
   .code-error {
     color: #FFF;
+  }
+
+  .message {
+    background-color: #282828;
+  }
+  .message form input[type=email] {
+    color: #F2F2F2;
   }
 }
 @media screen and (max-width: 1364px) {

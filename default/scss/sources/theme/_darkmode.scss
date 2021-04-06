@@ -52,4 +52,11 @@
   .code-error {
     color: $white;
   }
+
+  .message {
+    background-color: $dark-mode-gray-90;
+    form input[type=email] {
+      color: $c-concrete;
+    }
+  }  
 }

@@ -9,8 +9,13 @@
 
     .newsletterIcon {
       display: block;
-      margin: 35px auto;
-      width: 200px;
+      margin: {
+          top: 10px;
+          bottom: 35px;
+          left: auto;
+          right: auto;
+      };
+      width: 180px;
 
     }
 
@@ -35,6 +40,12 @@
     margin: auto;
     background-color: $c-concrete;
     border-radius: 20px;
+
+    form {
+        display: block;
+        width: 500px;
+        margin: auto;
+    }
 }
 
 .input-field {
