@@ -3,7 +3,8 @@
 /* ----------------------------------------------------- */
 /* Adaptative display for 1024px */
 @media screen and (max-width: 1024px) {
-  .article .content {
+  .container-grilled .content {
     margin-top: 0 !important;
+    padding-top: 0 !important;
   }
 }

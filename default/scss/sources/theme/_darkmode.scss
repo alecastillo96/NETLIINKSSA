@@ -5,21 +5,12 @@
   }
 
   p {
-    color: $dark-color-text;
-  }
-
-  .container--article {
-    background-color: $dark-color-base;
-    border-radius: 0;
-  }
-
-  .container--article:nth-child(even) {
-    background-color: $dark-color-foreground;
-  }
-
-  .container--article h3 {
     color: $white;
   }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: $white;
+  } 
 
   .menu-bar {
     background: rgba(20, 20, 20, 0.9);
@@ -32,10 +23,6 @@
   .submit {
     background-color: $dark-color-foreground !important;
   }
-
-  .submit h1 {
-    color: rgba($white, 0.8);
-  }
   
   .navigation.active {
     background-color: $dark-mode-gray-100 !important;
@@ -47,6 +34,10 @@
     &.active {
       filter: invert(0) !important;
     }
+  }
+
+  .container_tinted {
+    background-color: $dark-mode-gray-90;
   }
 
   .code-error {

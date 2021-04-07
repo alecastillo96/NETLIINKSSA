@@ -7,27 +7,24 @@
     background-color: rgba($black, 0.8);
   }
 
-  .article {
+  h1, h2, h3, h4, h5, h6, p {
+    color: $white;
+  }
+
+  .container-grilled {
     display: block;
   }
 
-  .article .content {
+  .container-grilled .content {
     margin-top: 32px;
   }
 
-  .article h3  {
+  .container-grilled h3  {
     margin-bottom: 16pt;
   }
 
-  .article img {
+  .container-grilled img {
     display: none;
-  }
-
-  #security,
-  #networking,
-  #ti {
-    margin-bottom: 20px;
-    backdrop-filter: saturate(50px);
   }
 
   #security { background-image: url('../images/milosz-klinowski-BW0d0IllW8E-unsplash.jpg'); }
@@ -41,6 +38,8 @@
     background-size: cover;
     background-position: center;
     background-blend-mode: overlay;
+    margin-bottom: 20px;
+    backdrop-filter: saturate(50px);
 
     .article .content {
       h3 { color: $white; }

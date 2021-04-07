@@ -137,49 +137,49 @@ header h1 small {
   text-transform: uppercase;
 }
 
+/* ------------------------------------------------- */
+/* ------------------- CONTAINER ------------------- */
+/* ------------------------------------------------- */
 .container {
   padding: 32pt 32pt;
   width: 100%;
   max-width: 1360px;
   margin: auto;
 }
-.container--article {
-  background-color: #F2F2F2;
-  border-radius: 20px;
+.container-flexible {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
-.container--article:nth-child(even) {
-  background-color: #FFF;
-}
-
-/* ------------------------------------------------ */
-/* ------------------- Articles ------------------- */
-/* ------------------------------------------------ */
-.article {
+.container-grilled {
   display: grid;
   grid-gap: 40pt;
   grid-template-columns: 1fr 1fr;
   padding-top: 32pt;
   padding-bottom: 32pt;
-  padding-left: 0pt;
   padding-right: 0pt;
+  padding-left: 0pt;
 }
-.article .content {
-  margin-top: 32pt;
-  margin-bottom: 32pt;
-  margin-left: 0pt;
-  margin-right: 0pt;
+.container-grilled .content {
+  padding-top: 32pt;
+  padding-bottom: 32pt;
+  padding-right: 0pt;
+  padding-left: 0pt;
 }
-.article img {
+.container-grilled img {
   width: 100%;
   border-radius: 5px;
   cursor: no-drop;
 }
-.article h3 {
+.container-grilled h3 {
   font-size: 22pt;
   margin-bottom: 32pt;
 }
-.article p {
+.container-grilled p {
   line-height: calc(8pt * 3);
+}
+.container_tinted {
+  background: #F2F2F2;
 }
 
 .submit {
@@ -414,20 +414,20 @@ header h1 small {
 /* -------------------------------------------- */
 /* ------------------- MODS ------------------- */
 /* -------------------------------------------- */
-[text-to-left] {
+.text_left {
   text-align: left;
 }
 
-[text-to-right] {
+.text_right {
   text-align: right;
 }
 
-[a-title-l] {
+.title-indicator_left {
   border-left: 8px solid #3BC4B2;
   padding-left: 20px;
 }
 
-[a-title-r] {
+.title-indicator-right {
   border-right: 8px solid #3BC4B2;
   padding-right: 20px;
 }
@@ -487,19 +487,10 @@ header h1 small {
   }
 
   p {
-    color: #81858B;
+    color: #FFF;
   }
 
-  .container--article {
-    background-color: #151616;
-    border-radius: 0;
-  }
-
-  .container--article:nth-child(even) {
-    background-color: #1C1D1D;
-  }
-
-  .container--article h3 {
+  h1, h2, h3, h4, h5, h6 {
     color: #FFF;
   }
 
@@ -515,10 +506,6 @@ header h1 small {
     background-color: #1C1D1D !important;
   }
 
-  .submit h1 {
-    color: rgba(255, 255, 255, 0.8);
-  }
-
   .navigation.active {
     background-color: #1C1C1C !important;
   }
@@ -530,6 +517,10 @@ header h1 small {
   .toggle.active {
     -webkit-filter: invert(0) !important;
             filter: invert(0) !important;
+  }
+
+  .container_tinted {
+    background-color: #282828;
   }
 
   .code-error {
@@ -544,7 +535,7 @@ header h1 small {
   }
 }
 @media screen and (max-width: 1364px) {
-  .container--article {
+  .container_round-l, .container_round-m, .container_round-sm {
     border-radius: 0 !important;
   }
 }
@@ -553,18 +544,9 @@ header h1 small {
 /* ----------------------------------------------------- */
 /* Adaptative display for 1024px */
 @media screen and (max-width: 1024px) {
-  .article .content {
+  .container-grilled .content {
     margin-top: 0 !important;
-  }
-}
-/* ----------------------------------------------------- */
-/* ------------------- screen: 930px ------------------- */
-/* ----------------------------------------------------- */
-/* Adaptative display for 930px */
-@media screen and (max-width: 930px) {
-  .article .content {
-    margin-top: 0;
-    margin-bottom: 0;
+    padding-top: 0 !important;
   }
 }
 /* --------------------------------------------------- */
@@ -576,28 +558,24 @@ header h1 small {
     background-color: rgba(0, 0, 0, 0.8);
   }
 
-  .article {
+  h1, h2, h3, h4, h5, h6, p {
+    color: #FFF;
+  }
+
+  .container-grilled {
     display: block;
   }
 
-  .article .content {
+  .container-grilled .content {
     margin-top: 32px;
   }
 
-  .article h3 {
+  .container-grilled h3 {
     margin-bottom: 16pt;
   }
 
-  .article img {
+  .container-grilled img {
     display: none;
-  }
-
-  #security,
-#networking,
-#ti {
-    margin-bottom: 20px;
-    -webkit-backdrop-filter: saturate(50px);
-            backdrop-filter: saturate(50px);
   }
 
   #security {
@@ -617,6 +595,9 @@ header h1 small {
     background-size: cover;
     background-position: center;
     background-blend-mode: overlay;
+    margin-bottom: 20px;
+    -webkit-backdrop-filter: saturate(50px);
+            backdrop-filter: saturate(50px);
   }
   #security .article .content h3, #networking .article .content h3, #ti .article .content h3 {
     color: #FFF;

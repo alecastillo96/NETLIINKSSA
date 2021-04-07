@@ -1,6 +1,22 @@
-// ===========
-// CONTAINER
-// ===========
+/* ------------------------------------------------- */
+/* ------------------- CONTAINER ------------------- */
+/* ------------------------------------------------- */
+
+// .container {
+//   padding: 32pt 32pt;
+//   width: 100%;
+//   max-width: 1360px;
+//   margin: auto;
+
+//   &--article {
+//     background-color: $c-concrete;
+//     border-radius: 20px;
+
+//     &:nth-child(even) {
+//       background-color: $white;
+//     }
+//   }
+// }
 
 .container {
   padding: 32pt 32pt;
@@ -8,12 +24,48 @@
   max-width: 1360px;
   margin: auto;
 
-  &--article {
-    background-color: $c-concrete;
-    border-radius: 20px;
+  &-flexible {
+    display: flex;
+  }
 
-    &:nth-child(even) {
-      background-color: $white;
+  &-grilled {
+    @include gridbox;
+    grid-template-columns: 1fr 1fr;
+    @include gpadding(padding-top, padding-bottom, padding-right, padding-left);
+
+    .content {
+      @include gpadding(padding-top, padding-bottom, padding-right, padding-left);
     }
+
+    img {
+      width: 100%;
+      border-radius: 5px;
+      cursor: no-drop;
+    }
+
+    h3 {
+      font-size: 22pt;
+      margin-bottom: 32pt;
+    }
+
+    p {
+      line-height: calc(8pt * 3);
+    }
+  }
+
+  &_round-sm {
+
+  }
+  
+  &_round-m {
+    
+  }
+
+  &_round-l {
+    
+  }
+
+  &_tinted {
+    background: $c-concrete;
   }
 }

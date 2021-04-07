@@ -1,15 +1,15 @@
 /* -------------------------------------------- */
 /* ------------------- MODS ------------------- */
 /* -------------------------------------------- */
-[text-to-left] { text-align: left; }
-[text-to-right] { text-align: right; }
+.text_left { text-align: left; }
+.text_right { text-align: right; }
 
-[a-title-l] {
+.title-indicator_left {
   border-left: 8px solid $primary;
   padding-left: 20px;
 }
 
-[a-title-r] {
+.title-indicator-right {
   border-right: 8px solid $primary;
   padding-right: 20px;
 }

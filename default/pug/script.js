@@ -24,6 +24,5 @@ document.querySelectorAll(".controls button").forEach(
 
 feather.replace();
 
-// tab-button_active
 
 
