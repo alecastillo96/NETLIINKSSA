@@ -800,7 +800,10 @@ header h1 small {
     z-index: 11;
   }
 
-  form {
+  .submit h1 {
+    color: #333;
+  }
+  .submit form {
     width: 100% !important;
   }
 }
