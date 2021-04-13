@@ -321,7 +321,7 @@ header h1 small {
 
 .button-primary, .btn-primary {
   background-color: #3BC4B2;
-  border-color: rgba(59, 196, 178, 0) !important;
+  border-color: #3bc4b2 !important;
   color: #FFF;
 }
 .button-primary:hover, .btn-primary:hover {
@@ -333,7 +333,6 @@ header h1 small {
 }
 
 .button-modal {
-  color: #3BC4B2;
   border: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -342,7 +341,6 @@ header h1 small {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 25px;
-  background-color: rgba(255, 255, 255, 0);
 }
 .button-modal .icon {
   margin-left: 10px;
