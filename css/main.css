@@ -496,6 +496,10 @@ header h1 small {
   text-align: right;
 }
 
+.align_right {
+  margin-left: auto;
+}
+
 .title-indicator_left {
   border-left: 8px solid #3BC4B2;
   padding-left: 20px;
