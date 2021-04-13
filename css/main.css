@@ -183,9 +183,7 @@ header h1 small {
 }
 
 .submit {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   -webkit-box-align: center;
