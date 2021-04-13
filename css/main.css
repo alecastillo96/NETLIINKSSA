@@ -392,6 +392,7 @@ header h1 small {
   height: 100vh;
   width: 100vw;
   z-index: 99999;
+  padding: 20px;
 }
 
 .modal {
@@ -608,6 +609,16 @@ header h1 small {
   }
   .message form input[type=email] {
     color: #F2F2F2;
+  }
+
+  .modal {
+    background-color: #282828;
+  }
+  .modal h1 {
+    color: #FFF;
+  }
+  .modal p {
+    color: rgba(255, 255, 255, 0.7);
   }
 }
 @media screen and (max-width: 1364px) {
