@@ -3,14 +3,66 @@
   <head>
     <title>NETLIINKS S.A. | Acerca de</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"><meta property="og:title" content="European Travel Destinations">
+<meta property="og:description" content="Offering tour packages for individuals or groups.">
+<meta property="og:image" content="http://euro-travel-example.com/thumbnail.jpg">
+<meta property="og:url" content="http://euro-travel-example.com/index.htm">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="fonts/Inter/inter.css">
     <script src="scripts/vendors/feather.js"></script>
   </head>
   <body>
-    <div class="container" id="about"><img class="pdf" src="images/pdf.png">
-      <p>catálogo</p><span class="archPeso">12mb</span>
-    </div>
+    <header>
+      <div class="container">
+        <h1>NETLIINKS S.A. <br><small>Networking &amp; security</small></h1>
+      </div>
+    </header>
+    <nav class="menu-bar"><a class="showcaseResp" href="index.html">Netliinks</a>
+      <div class="toggle" onclick="toggleMenu()" role="button"></div>
+      <ul class="navigation">
+        <li><a href="404.html">Servicios</a></li>
+        <li><a href="404.html">Actividades</a></li>
+        <li class="showcase"><a href="https://alecastillo96.github.io/NETLIINKSSA/">Netliinks</a></li>
+        <li><a href="about.html">Acerca de</a></li>
+        <li><a href="mailto:info@netliinks.com" target='_blank' rel='noopener noreferrer'>Contacto</a></li>
+      </ul>
+    </nav>
+    <script type="text/javascript">const toggleMenu = () => {
+	let menuToggle = document.querySelector('.toggle');
+	let navigation = document.querySelector('.navigation');
+	menuToggle.classList.toggle('active')
+	navigation.classList.toggle('active')
+}
+
+// Tabs
+document.querySelectorAll(".controls button").forEach(
+	button => {
+		button.addEventListener("click", (ev) => {
+			const parent = button.parentNode;
+			const granParent = parent.parentNode;
+			const container = granParent.querySelector(".tabs-container");
+			const childrenList = Array.from(parent.children);
+			const index = childrenList.indexOf(button);
+			container.style.transform = `translatex(-${index * 100}%)`;
+
+			parent.querySelectorAll("button.tabButtonActive").forEach (activeBtn => activeBtn.classList.remove("tabButtonActive"));
+			button.classList.add("tabButtonActive");
+		})
+	}
+)
+
+feather.replace();
+
+// Abrir ventana modal
+const openModal = (param) => {
+	let modal_container = document.getElementById("modal-" + param);
+	modal_container.classList.add('show');
+}
+
+const closeModal = (param) => {
+	let modal_container = document.getElementById("modal-" + param);
+	modal_container.classList.remove('show');
+}
+    </script>
   </body>
 </html>
