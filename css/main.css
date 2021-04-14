@@ -782,6 +782,11 @@ header h1 small {
   .navigation.active li {
     padding: 20px 0px;
   }
+  .navigation.active li a:hover {
+    background-color: rgba(59, 196, 178, 0.3);
+    border-radius: 5px;
+    color: rgba(255, 255, 255, 0.8);
+  }
   .navigation.active .showcase {
     display: none;
   }
@@ -814,17 +819,27 @@ header h1 small {
   }
 
   .submit h1 {
+    font-size: 55px;
+    line-height: calc(55px * 1.5);
     color: #333;
   }
   .submit form {
     width: 100% !important;
   }
 }
+@media screen and (max-width: 700px) and (prefers-color-scheme: dark) {
+  .submit h1 {
+    color: #FFF;
+  }
+}
 /* ----------------------------------------------------- */
 /* ------------------- screen: 600px ------------------- */
 /* ----------------------------------------------------- */
 @media screen and (max-width: 600px) {
-  /* Add options here */
+  .submit h1 {
+    font-size: 30pt;
+    line-height: calc($font-size * 1.25);
+  }
 }
 /* ----------------------------------------------------- */
 /* ------------------- screen: 414px ------------------- */
@@ -847,7 +862,7 @@ header h1 small {
   }
 
   .submit h1 {
-    font-size: 14pt;
-    line-height: 22pt;
+    font-size: 24pt;
+    line-height: calc($font-size * 1.25);
   }
 }
