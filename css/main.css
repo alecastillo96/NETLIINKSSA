@@ -180,6 +180,7 @@ header h1 small {
 }
 .container_tinted {
   background: #F2F2F2;
+  border-radius: 10px;
 }
 
 .submit {
@@ -393,22 +394,33 @@ header h1 small {
   width: 100vw;
   z-index: 99999;
   padding: 20px;
+  -webkit-animation: cubic-bezier(0.14, 1, 0.34, 1);
+          animation: cubic-bezier(0.14, 1, 0.34, 1);
 }
 
 .modal {
   background-color: #FFF;
   width: 600px;
   max-width: 100%;
+  height: 400px;
   padding: 30px 50px;
   border-radius: 5px;
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  overflow-y: scroll;
+  position: absolute;
+}
+.modal::before {
+  content: " ";
+  background-color: rgba(0, 0, 0, 0.3);
+  height: 100vh;
 }
 .modal h1 {
   color: #333;
 }
 .modal p {
   color: #777;
+  font-size: 16px;
 }
 
 .show {
@@ -419,6 +431,66 @@ header h1 small {
 .verMas {
   display: inline-block;
   text-align: left;
+}
+
+.toggler {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  border: 0;
+  border-radius: 5px;
+  color: #3BC4B2;
+  text-align: right;
+  background: none;
+  line-height: -1;
+  font-size: 14px;
+  cursor: pointer;
+  padding-top: 0;
+  padding-right: 3px;
+  padding-bottom: 0;
+  padding-left: 3px;
+  outline: none;
+  font-weight: normal;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+.toggler .down {
+  display: none;
+}
+.toggler .right, .toggler .down {
+  height: 18px;
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+}
+.toggler .feather-icon {
+  /* write style here */
+}
+.toggler-content {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.2s ease-out;
+  transition: max-height 0.2s ease-out;
+  /* TODO: here write a color */
+}
+.toggler-content p {
+  color: #3BC4B2 !important;
+  font-size: 14px;
+}
+.toggler_active {
+  font-weight: bold;
+  background-color: rgba(59, 196, 178, 0.1);
+}
+.toggler_active .right {
+  display: none;
+}
+.toggler_active .down {
+  display: block;
 }
 
 #about .pdf {
@@ -620,10 +692,18 @@ header h1 small {
   .modal p {
     color: rgba(255, 255, 255, 0.7);
   }
+  .modal b {
+    color: #FFF;
+  }
 }
 @media screen and (max-width: 1364px) {
   .container_round-l, .container_round-m, .container_round-sm {
     border-radius: 0 !important;
+  }
+}
+@media screen and (max-width: 1366px) {
+  .container_tinted {
+    border-radius: 0;
   }
 }
 /* ----------------------------------------------------- */
