@@ -16,7 +16,7 @@
     <script src="scripts/vendors/feather.js"></script>
   </head>
   <body>
-    <header>
+    <header id="index">
       <div class="container"><img class="showcase-icon" src="images/logo.png">
         <h2>NETLIINKS S.A.</h2><small>Networking &amp; security</small>
       </div>
@@ -26,7 +26,7 @@
       <ul class="navigation">
         <li><a href="404.html">Servicios</a></li>
         <li><a href="404.html">Actividades</a></li>
-        <li class="showcase"><a href="https://alecastillo96.github.io/NETLIINKSSA/">Netliinks</a></li>
+        <li class="showcase"><a href="index.html/">Netliinks</a></li>
         <li><a href="about.html">Acerca de</a></li>
         <li><a href="mailto:info@netliinks.com" target='_blank' rel='noopener noreferrer'>Contacto</a></li>
       </ul>
@@ -93,13 +93,14 @@
     </div>
     <div class="newsbar">
       <div class="container">
-        <button class="toggler"><i class="right" data-feather="chevron-right"></i><i class="down" data-feather="chevron-down"></i>
+        <button class="toggler"><i class="right" data-feather="chevron-right" animation="rotate-chevron"></i>
           <div class="caption">Descubre nuestras novedades del mes de Abril 🎉</div>
         </button>
         <div class="toggler-content">
           <p>👨🏻‍💻 La app <b>NetGuard</b> ahora se adapta para trabajar en tablets!</p>
           <p>📚 Ya están disponibles las instrucciones de las apps <a href="#">aquí</a>.</p>
           <p>💸 <b>Solo por hoy</b> 25% de descuento en todos nuestros productos.</p>
+          <p><a href="https://alecastillo96.github.io/NETLIINKSSA"><i data-feather="github"></i> Ir a github</a></p>
         </div>
       </div>
     </div>
@@ -117,7 +118,37 @@
           </form>
         </div>
       </div>
-    </div><script src="content.js"></script>
+    </div>
+    <footer class="foo">
+      <div class="container">
+        <div class="pre">
+          <div class="foo-brand"><img class="foo-logo" src="images/logo.png">
+            <div class="brand">
+              <p>NETLIINKS S.A.</p><small>Networking &amp; security</small>
+            </div>
+          </div>
+          <div class="aw3d42"><a class="gotoapps" href="404.html"><i data-feather="box" class="box-foo"></i> <span>Aplicaciones</span></a></div>
+        </div>
+        <div class="foo_navigation">
+          <nav class="foo-bar">
+            <ul class="left">
+              <li><a href="#index">Inicio <i data-feather="chevrons-up" class="chevron-up"></i></a></li>
+            </ul>
+            <ul class="right">
+              <li><a href="404.html">Servicios</a></li>
+              <li><a href="404.html">Actividades</a></li>
+              <li><a href="404.html">Acerca de</a></li>
+              <li><a href="404.html">Contacto</a></li>
+              <li><a href="404.html">Aplicaciones</a></li>
+              <li><a href="404.html">Soporte</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="copy">
+          <p class="copyright">&copy; 2021 Netliinks S.A.</p>
+        </div>
+      </div>
+    </footer><script src="content.js"></script>
 <script src="scripts/app.js"></script>
   </body>
 </html>
