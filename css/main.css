@@ -23,32 +23,32 @@ h1, h2, h3, h4, h5, b {
 }
 
 h1 {
-  font-size: 48.828125px;
-  line-height: 68.3594433594px;
+  font-size: 42.724609375px;
+  line-height: 59.8145129395px;
 }
 
 h2 {
-  font-size: 39.0625px;
-  line-height: 54.6875546876px;
+  font-size: 34.1796875px;
+  line-height: 47.8516103516px;
 }
 
 h3 {
-  font-size: 31.25px;
-  line-height: 43.75004375px;
+  font-size: 27.34375px;
+  line-height: 38.2812882813px;
 }
 
 h4 {
-  font-size: 25px;
-  line-height: 35.000035px;
+  font-size: 21.875px;
+  line-height: 30.625030625px;
 }
 
 h5 {
-  font-size: 20px;
-  line-height: 28.000028px;
+  font-size: 17.5px;
+  line-height: 24.5000245px;
 }
 
 p {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.75;
   color: #777777;
 }
@@ -61,19 +61,19 @@ a {
 .caption {
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-size: 12.8px;
-  line-height: 17.92001792px;
+  font-size: 11.2px;
+  line-height: 15.68001568px;
 }
 
 .copyright {
   text-transform: uppercase;
-  font-size: 12.8px;
-  line-height: 17.92001792px;
+  font-size: 11.2px;
+  line-height: 15.68001568px;
 }
 
 .tiny-text {
-  font-size: 10.24px;
-  line-height: 14.336014336px;
+  font-size: 8.96px;
+  line-height: 12.544012544px;
 }
 
 .showcase-icon {
@@ -105,7 +105,7 @@ header {
   background-blend-mode: multiply;
 }
 header small {
-  font-size: 31.25px;
+  font-size: 27.34375px;
   font-weight: 200;
   font-style: italic;
   letter-spacing: -2px;
@@ -538,12 +538,12 @@ header h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-size: 12px;
-  padding: 5px;
+  font-size: 10px;
+  padding: 5px 8px 5px 1px;
   text-transform: uppercase;
 }
 .foo .gotoapps .box-foo {
-  height: 16px;
+  height: 14px;
 }
 .foo .pre {
   -webkit-box-align: center;
@@ -583,7 +583,7 @@ header h2 {
 }
 .foo-bar .right li a {
   color: #010101;
-  font-size: 13px;
+  font-size: 11px;
   padding: 0 5px;
 }
 .foo-bar .left {
@@ -599,7 +599,7 @@ header h2 {
 }
 .foo-bar .left li a {
   color: #010101;
-  font-size: 13px;
+  font-size: 11px;
 }
 .foo-bar .left li a:hover {
   color: #3BC4B2;
@@ -686,13 +686,36 @@ header h2 {
 }
 
 .title-indicator_left {
-  border-left: 8px solid #3BC4B2;
-  padding-left: 20px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 15px;
+}
+.title-indicator_left:before {
+  content: "";
+  height: 100%;
+  background: #3BC4B2;
+  width: 10px;
+  position: absolute;
+  left: 0;
 }
 
-.title-indicator-right {
-  border-right: 8px solid #3BC4B2;
-  padding-right: 20px;
+.title-indicator_right {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-right: 15px;
+  background: red;
+}
+.title-indicator_right:after {
+  content: "";
+  height: 100%;
+  background: #3BC4B2;
+  width: 10px;
+  position: absolute;
+  right: 0;
 }
 
 ::-moz-selection {
@@ -750,19 +773,15 @@ header h2 {
   }
 
   p {
-    color: #EFEFEF;
+    color: rgba(239, 239, 239, 0.8) !important;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  .modal h1, .modal h2, .modal b, .menu-bar a, h1, h2, h3, h4, h5, h6 {
     color: #EFEFEF;
   }
 
   .menu-bar {
     background: rgba(20, 20, 20, 0.9);
-  }
-
-  .menu-bar a {
-    color: #EFEFEF;
   }
 
   .navigation.active {
@@ -796,15 +815,6 @@ header h2 {
   .modal {
     background-color: #282828;
   }
-  .modal h1 {
-    color: #EFEFEF;
-  }
-  .modal p {
-    color: rgba(239, 239, 239, 0.7);
-  }
-  .modal b {
-    color: #EFEFEF;
-  }
 
   .newsbar {
     background-color: #323434fa;
@@ -820,8 +830,27 @@ header h2 {
   }
 
   .foo {
-    -webkit-filter: invert(1);
-            filter: invert(1);
+    background-color: #282828;
+  }
+  .foo .light {
+    -webkit-filter: invert(0);
+            filter: invert(0);
+  }
+  .foo .gotoapps {
+    color: #EFEFEF;
+    background-color: rgba(239, 239, 239, 0.2);
+  }
+  .foo p {
+    color: #EFEFEF;
+  }
+  .foo_navigation {
+    border-color: rgba(239, 239, 239, 0.5);
+  }
+  .foo-bar .right li a, .foo-bar .left li a {
+    color: #EFEFEF;
+  }
+  .foo-brand .brand small {
+    color: #EFEFEF;
   }
 }
 @media screen and (max-width: 1364px) {
@@ -1069,7 +1098,7 @@ header h2 {
     height: 65vh;
   }
   header h2, header small {
-    font-size: 31.25px;
+    font-size: 27.34375px;
   }
 
   header h1 {
