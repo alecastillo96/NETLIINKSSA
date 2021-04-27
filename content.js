@@ -5,46 +5,46 @@
 
 // PREVIO ==============================================================================
 let securitySystems = `
-  Contenido editable de sistemas de seguridad
+  I'm baby hashtag banjo intelligentsia, trust fund green juice chia 8-bit adaptogen farm-to-table. Typewriter vinyl asymmetrical listicle trust fund shoreditch disrupt hexagon man braid hoodie. Succulents affogato photo booth deep v, heirloom art party portland humblebrag la croix chartreuse live-edge lumbersexual knausgaard. Four loko cred helvetica hexagon schlitz tattooed.
 `;
 
 // MODAL ++++
 let securitySystemsModal= `
-  Contenido <b>editable</b> del modal de <i>Sistemas de seguridad.....</i>
+  I'm baby hashtag banjo intelligentsia, trust fund green juice chia 8-bit adaptogen farm-to-table. Typewriter vinyl asymmetrical listicle trust fund shoreditch disrupt hexagon man braid hoodie. Succulents affogato photo booth deep v, heirloom art party portland humblebrag la croix chartreuse live-edge lumbersexual knausgaard. Four loko cred helvetica hexagon schlitz tattooed.
 `;
 
 
 // PREVIO ==============================================================================
 let netWorking = `
-  Contenido editable de networking
+  I'm baby hashtag banjo intelligentsia, trust fund green juice chia 8-bit adaptogen farm-to-table. Typewriter vinyl asymmetrical listicle trust fund shoreditch disrupt hexagon man braid hoodie. Succulents affogato photo booth deep v, heirloom art party portland humblebrag la croix chartreuse live-edge lumbersexual knausgaard. Four loko cred helvetica hexagon schlitz tattooed.
 `;
 
 // MODAL ++++
 let netWorkingModal= `
-  Contenido <b>editable</b> del modal de <i>Networking</i>
+  I'm baby hashtag banjo intelligentsia, trust fund green juice chia 8-bit adaptogen farm-to-table. Typewriter vinyl asymmetrical listicle trust fund shoreditch disrupt hexagon man braid hoodie. Succulents affogato photo booth deep v, heirloom art party portland humblebrag la croix chartreuse live-edge lumbersexual knausgaard. Four loko cred helvetica hexagon schlitz tattooed.
 `;
 
 
 
 // PREVIO ==============================================================================
 let it = `
-  Contenido editable de Soporte técnico.
+  I'm baby hashtag banjo intelligentsia, trust fund green juice chia 8-bit adaptogen farm-to-table. Typewriter vinyl asymmetrical listicle trust fund shoreditch disrupt hexagon man braid hoodie. Succulents affogato photo booth deep v, heirloom art party portland humblebrag la croix chartreuse live-edge lumbersexual knausgaard. Four loko cred helvetica hexagon schlitz tattooed.
 `;
 
 // MODAL ++++
 let itModal= `
-  Contenido <b>editable</b> del modal de <i>Soporte Técnico</i>
+  I'm baby hashtag banjo intelligentsia, trust fund green juice chia 8-bit adaptogen farm-to-table. Typewriter vinyl asymmetrical listicle trust fund shoreditch disrupt hexagon man braid hoodie. Succulents affogato photo booth deep v, heirloom art party portland humblebrag la croix chartreuse live-edge lumbersexual knausgaard. Four loko cred helvetica hexagon schlitz tattooed.
 `;
 
 
 
 // PREVIO ==============================================================================
 let softwareDevelopment = `
-  Contenido editable de Soporte técnico.
+  I'm baby hashtag banjo intelligentsia, trust fund green juice chia 8-bit adaptogen farm-to-table. Typewriter vinyl asymmetrical listicle trust fund shoreditch disrupt hexagon man braid hoodie. Succulents affogato photo booth deep v, heirloom art party portland humblebrag la croix chartreuse live-edge lumbersexual knausgaard. Four loko cred helvetica hexagon schlitz tattooed.
 `;
 
 // MODAL ++++
 let softwareDevelopmentModal= `
-  Contenido <b>editable</b> del modal de <i>Desarrollo de software</i>
+  I'm baby hashtag banjo intelligentsia, trust fund green juice chia 8-bit adaptogen farm-to-table. Typewriter vinyl asymmetrical listicle trust fund shoreditch disrupt hexagon man braid hoodie. Succulents affogato photo booth deep v, heirloom art party portland humblebrag la croix chartreuse live-edge lumbersexual knausgaard. Four loko cred helvetica hexagon schlitz tattooed.
 `;
 
