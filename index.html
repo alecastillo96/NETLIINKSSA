@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"><meta property="og:title" content="NETLIINKS S.A. | Networking & Security">
 <meta property="og:description" content="Offering our services for individuals or groups.">
-<meta property="og:image" content="images/collin-armstrong-8FxJi5wuwKc-unsplash.jpg">
+<meta property="og:image" content="images/collin-armstrong-8FxJi5wuwKc-unsplash.png">
 <meta property="og:url" content="https://alecastillo96.github.io/NETLIINKSSA/">
 <meta name="twitter:title" content="NETLIINKS S.A. | Networking & Security">
 <meta name="twitter:description" content="Offering our services for individuals or groups.">
-<meta name="twitter:image" content="images/elly-brian-s_C8yBxJyvM-unsplash.jpg">
+<meta name="twitter:image" content="images/elly-brian-s_C8yBxJyvM-unsplash.png">
 <meta name="twitter:card" content="summary_large_image">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="fonts/Inter/inter.css">
@@ -22,7 +22,7 @@
       </div>
     </header>
     <nav class="menu-bar"><a class="showcaseResp" href="index.html">Netliinks</a>
-      <div class="toggle" onclick="toggleMenu()" role="button"></div>
+      <div class="toggleMenu"></div>
       <ul class="navigation">
         <li><a href="404.html">Servicios</a></li>
         <li><a href="404.html">Actividades</a></li>
@@ -35,7 +35,7 @@
       <div class="container-grilled"><img class="flex-item" src="images/milosz-klinowski-BW0d0IllW8E-unsplash.png" alt="NETLIINKS SECURITY">
         <div class="content">
           <h2 class="title-indicator_left">Sistemas de seguridad</h2>
-          <p class="text_left" id="cont1"></p><br> <button onclick="openModal('seguridad')" class="button button-modal button_small button-primary"> <span>Ver más</span> <i class="icon" data-feather="arrow-right"></i></button>
+          <p class="text_left" id="cont1"></p><br> <button onclick="openModal('seguridad')" class="btn btn-modal btn_small btn-primary"> <span>Ver más</span> <i class="icon" data-feather="arrow-right"></i></button>
         </div>
       </div>
     </div>
@@ -43,7 +43,7 @@
       <div class="container-grilled">
         <div class="content">
           <h2 class="title-indicator_right">Networking</h2>
-          <p class="text_right" id="cont2"></p><button onclick="openModal('networking')" class="button button-modal button-primary align_right button_small"> <span>Ver más</span> <i class="icon" data-feather="arrow-right"></i></button>
+          <p class="text_right" id="cont2"></p><button onclick="openModal('networking')" class="btn btn-modal btn-primary align_right btn_small"> <span>Ver más</span> <i class="icon" data-feather="arrow-right"></i></button>
         </div><img class="flex-item" src="images/jordan-harrison-40XgDxBfYXM-unsplash.png" alt="NETLIINKS NETWORKING">
       </div>
     </div>
@@ -51,7 +51,7 @@
       <div class="container-grilled"><img class="flex-item" src="images/elly-brian-s_C8yBxJyvM-unsplash.png" alt="NETLIINKS SECURITY">
         <div class="content">
           <h2 class="text_left title-indicator_left">Soporte técnico</h2>
-          <p class="text-to-left limitado" id="cont3"></p><button onclick="openModal('soporteTecnico')" class="button button-modal button_small button-primary"> <span>Ver más</span> <i class="icon" data-feather="arrow-right"></i></button>
+          <p class="text-to-left limitado" id="cont3"></p><button onclick="openModal('soporteTecnico')" class="btn btn-modal btn_small btn-primary"> <span>Ver más</span> <i class="icon" data-feather="arrow-right"></i></button>
         </div>
       </div>
     </div>
@@ -59,7 +59,7 @@
       <div class="container-grilled">
         <div class="content">
           <h2 class="text_right title-indicator_right">Desarrollo de software</h2>
-          <p class="text_right" id="cont4"></p><button onclick="openModal('desarrollo')" class="button button-modal align_right button_small button-primary"> <span>Ver más</span> <i class="icon" data-feather="arrow-right"></i></button>
+          <p class="text_right" id="cont4"></p><button onclick="openModal('desarrollo')" class="btn btn-modal align_right btn_small btn-primary"> <span>Ver más</span> <i class="icon" data-feather="arrow-right"></i></button>
         </div><img class="flex-item" src="images/ilya-pavlov-OqtafYT5kTw-unsplash.png" alt="NETLIINKS NETWORKING">
       </div>
     </div>
@@ -67,28 +67,28 @@
       <div class="modal">
         <h1>Desarrollo de software</h1><br>
         <p id="softwareDevelopmentModal"></p><br>
-        <button class="button button-primary button_small" onclick="closeModal('desarrollo')">Cerrar</button>
+        <button class="btn btn-primary btn_small" onclick="closeModal('desarrollo')">Cerrar</button>
       </div>
     </div>
     <div class="modal-container" id="modal-soporteTecnico">
       <div class="modal">
         <h1>Soporte Tecnico</h1><br>
         <p id="itModal"></p><br>
-        <button class="button button-primary button_small" onclick="closeModal('soporteTecnico')">Cerrar</button>
+        <button class="btn btn-primary btn_small" onclick="closeModal('soporteTecnico')">Cerrar</button>
       </div>
     </div>
     <div class="modal-container" id="modal-seguridad">
       <div class="modal">
         <h1>Sistemas de seguridad</h1><br>
         <p id="securitySystemsModal"></p><br>
-        <button class="button button-primary button_small" onclick="closeModal('seguridad')">Cerrar</button>
+        <button class="btn btn-primary btn_small" onclick="closeModal('seguridad')">Cerrar</button>
       </div>
     </div>
     <div class="modal-container" id="modal-networking">
       <div class="modal">
         <h1>Networking</h1><br>
         <p id="networkingModal"></p><br>
-        <button class="button button-primary button_small" onclick="closeModal('networking')">Cerrar</button>
+        <button class="btn btn-primary btn_small" onclick="closeModal('networking')">Cerrar</button>
       </div>
     </div>
     <div class="newsbar">
@@ -107,13 +107,13 @@
       <div class="container">
         <div class="message"><img class="newsletterIcon" src="images/newsletter.png">
           <h1>suscríbete</h1>
-          <p>Suscríbete a nuestro feed de noticias y mantente actualizado.</p>
+          <p>Suscríbete a nuestro feed de noticias y mantente actualizado.</p><br><br>
           <form>
             <div class="input-field">
-              <input class="success" type="email" name="" required="">
+              <input class="mailInput" type="email">
               <label>Por favor, ingrese su email</label><span></span>
             </div><br>
-            <input class="button button_small button-primary" type="submit" value="enviar">
+            <input class="btn btn_small btn-primary" type="submit" value="enviar">
           </form>
         </div>
       </div>
