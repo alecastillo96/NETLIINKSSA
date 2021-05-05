@@ -42,5 +42,8 @@ var closeModal = function closeModal(value) {
 
 var mailInput = document.querySelector(".mailInput");
 mailInput.required = " ";
-var screen = window.innerWidth;
-console.info(screen);
+var content = document.getElementsByTagName("html");
+var toggleDarkMode = document.querySelector(".toggleDarkMode");
+toggleDarkMode.addEventListener('click', function () {
+  content[0].classList.toggle('dark');
+});
