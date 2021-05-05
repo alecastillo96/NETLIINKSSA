@@ -41,9 +41,25 @@ var closeModal = function closeModal(value) {
 
 
 var mailInput = document.querySelector(".mailInput");
-mailInput.required = " ";
+mailInput.required = " "; // Set darkmode switcher action
+
 var content = document.getElementsByTagName("html");
 var toggleDarkMode = document.querySelector(".toggleDarkMode");
 toggleDarkMode.addEventListener('click', function () {
   content[0].classList.toggle('dark');
+  toggleDarkMode.classList.toggle('toggleDarkModeActive');
+
+  if (content[0].classList.contains('dark')) {
+    localStorage.setItem('dark-mode', 'true');
+  } else {
+    localStorage.setItem('dark-mode', 'false');
+  }
 });
+
+if (localStorage.getItem('dark-mode') === 'true') {
+  content[0].classList.add('dark');
+  toggleDarkMode.classList.add('toggleDarkModeActive');
+} else {
+  content[0].classList.remove('dark');
+  toggleDarkMode.classList.remove('toggleDarkModeActive');
+}
