@@ -37,15 +37,13 @@ var openModal = function openModal(value) {
 var closeModal = function closeModal(value) {
   var modal_container = document.getElementById("modal-" + value);
   modal_container.classList.remove('show');
-}; // Validate mail Input
+}; // Set darkmode switcher action
 
-
-var mailInput = document.querySelector(".mailInput");
-mailInput.required = " "; // Set darkmode switcher action
 
 var content = document.getElementsByTagName("html");
 var toggleDarkMode = document.querySelector(".toggleDarkMode");
-toggleDarkMode.addEventListener('click', function () {
+
+function switchDarkMode() {
   content[0].classList.toggle('dark');
   toggleDarkMode.classList.toggle('toggleDarkModeActive');
 
@@ -54,7 +52,7 @@ toggleDarkMode.addEventListener('click', function () {
   } else {
     localStorage.setItem('dark-mode', 'false');
   }
-});
+}
 
 if (localStorage.getItem('dark-mode') === 'true') {
   content[0].classList.add('dark');
@@ -62,4 +60,49 @@ if (localStorage.getItem('dark-mode') === 'true') {
 } else {
   content[0].classList.remove('dark');
   toggleDarkMode.classList.remove('toggleDarkModeActive');
+}
+/* Validar el mail */
+
+
+var mailInput = document.querySelector('.mailInput');
+var sendMailButton = document.getElementById('sendMailButton');
+var resultado = document.getElementById('mailAlert');
+sendMailButton.addEventListener('click', function (e) {
+  e.preventDefault();
+  var error = validateData();
+  var ms = mailInput.value;
+
+  if (error[0]) {
+    resultado.classList.remove('mail-alert-success');
+    resultado.innerHTML = "<span>".concat(error[1], "</span>");
+    resultado.classList.add('mail-alert-error');
+  } else {
+    resultado.classList.remove('mail-alert-error');
+    resultado.innerHTML = "<span><b>".concat(ms, "</b> te has suscrito \uD83C\uDF89</span>");
+    resultado.classList.add('mail-alert-success');
+    setTimeout(function () {
+      mailInput.value = "";
+    }, 200);
+  }
+});
+
+function validateData() {
+  var error = [];
+
+  if (mailInput.value.length < 5) {
+    error[0] = true;
+    error[1] = "<i><b>Error:</b> el correo no puede contener menos de 5 caracteres.</i>";
+    return error;
+  } else if (mailInput.value.indexOf("@") == -1) {
+    error[0] = true;
+    error[1] = "<i><b>Error:</b> parece que esta no es una dirección de correo válida. <b><code>Falta: arroba</code><b></i>";
+    return error;
+  } else if (mailInput.value.indexOf(".") == -1) {
+    error[0] = true;
+    error[1] = "<i><b>Error:</b> parece que esta no es una dirección de correo válida. <b><code>Falta: punto</code><b></i></i>";
+    return error;
+  }
+
+  error[0] = false;
+  return error;
 }

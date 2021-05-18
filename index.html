@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"><meta property="og:title" content="NETLIINKS S.A. | Networking & Security">
 <meta property="og:description" content="Offering our services for individuals or groups.">
-<meta property="og:image" content="images/collin-armstrong-8FxJi5wuwKc-unsplash.png">
+<meta property="og:image" content="images/collin-armstrong-8FxJi5wuwKc-unsplash.jpg">
 <meta property="og:url" content="https://alecastillo96.github.io/NETLIINKSSA/">
 <meta name="twitter:title" content="NETLIINKS S.A. | Networking & Security">
 <meta name="twitter:description" content="Offering our services for individuals or groups.">
-<meta name="twitter:image" content="images/elly-brian-s_C8yBxJyvM-unsplash.png">
+<meta name="twitter:image" content="images/elly-brian-s_C8yBxJyvM-unsplash.jpg">
 <meta name="twitter:card" content="summary_large_image">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="fonts/Inter/inter.css">
@@ -31,8 +31,7 @@
         <li><a href="about.html">Acerca de</a></li>
         <li><a href="mailto:info@netliinks.com" target='_blank' rel='noopener noreferrer'>Contacto</a></li>
         <div class="right">
-          <p>tema:</p>
-          <li><input type="checkbox" class="toggleDarkMode"></li>
+          <li><input type="checkbox" class="toggleDarkMode" onclick="switchDarkMode()"></li>
         </div>
       </ul>
     </nav><br>
@@ -115,11 +114,12 @@
           <p>Suscríbete a nuestro feed de noticias y mantente actualizado.</p><br><br>
           <form>
             <div class="input-field">
-              <input class="mailInput" type="email">
+              <input class="mailInput" type="email" required="">
               <label>Por favor, ingrese su email</label><span></span>
             </div><br>
-            <input class="btn btn_small btn-primary" type="submit" value="enviar">
+            <input class="btn btn_small btn-primary" type="submit" value="enviar" id="sendMailButton">
           </form>
+          <div class="mail-alert" id="mailAlert"></div>
         </div>
       </div>
     </div>
