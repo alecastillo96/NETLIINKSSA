@@ -66,38 +66,38 @@ if (localStorage.getItem('dark-mode') === 'true') {
 
 var mailInput = document.querySelector('.mailInput');
 var sendMailButton = document.getElementById('sendMailButton');
-var resultado = document.getElementById('mailAlert');
+var alert = document.getElementById('mailAlert');
 sendMailButton.addEventListener('click', function (e) {
   e.preventDefault();
   var error = validateData();
   var ms = mailInput.value;
 
   if (error[0]) {
-    resultado.classList.remove('mail-alert-success');
-    resultado.innerHTML = "<span>".concat(error[1], "</span>");
-    resultado.classList.add('mail-alert-error');
+    alert.classList.remove('mail-alert-success');
+    alert.innerHTML = "<span>".concat(error[1], "</span>");
+    alert.classList.add('mail-alert-error');
   } else {
-    resultado.classList.remove('mail-alert-error');
-    resultado.innerHTML = "<span><b>".concat(ms, "</b> te has suscrito \uD83C\uDF89</span>");
-    resultado.classList.add('mail-alert-success');
+    alert.classList.remove('mail-alert-error');
+    alert.innerHTML = "<span><b>".concat(ms, "</b> te has suscrito \uD83C\uDF89</span>");
+    alert.classList.add('mail-alert-success');
     setTimeout(function () {
       mailInput.value = "";
     }, 200);
   }
 });
 
-function validateData() {
+var validateData = function validateData() {
   var error = [];
 
   if (mailInput.value.length < 5) {
     error[0] = true;
     error[1] = "<i><b>Error:</b> el correo no puede contener menos de 5 caracteres.</i>";
     return error;
-  } else if (mailInput.value.indexOf("@") == -1) {
+  } else if (mailInput.value.indexOf("@") === -1) {
     error[0] = true;
     error[1] = "<i><b>Error:</b> parece que esta no es una dirección de correo válida. <b><code>Falta: arroba</code><b></i>";
     return error;
-  } else if (mailInput.value.indexOf(".") == -1) {
+  } else if (mailInput.value.indexOf(".") === -1) {
     error[0] = true;
     error[1] = "<i><b>Error:</b> parece que esta no es una dirección de correo válida. <b><code>Falta: punto</code><b></i></i>";
     return error;
@@ -105,4 +105,4 @@ function validateData() {
 
   error[0] = false;
   return error;
-}
+};
