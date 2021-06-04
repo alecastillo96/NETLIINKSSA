@@ -1,160 +1,96 @@
-<!DOCTYPE html>
+
 <html lang="es">
   <head>
     <title>NETLIINKS S.A. | Networking & Security</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"><meta property="og:title" content="NETLIINKS S.A. | Networking & Security">
-<meta property="og:description" content="Offering our services for individuals or groups.">
-<meta property="og:image" content="images/collin-armstrong-8FxJi5wuwKc-unsplash.jpg">
-<meta property="og:url" content="https://alecastillo96.github.io/NETLIINKSSA/">
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://res.cloudinary.com/dr6lvwubh/raw/upload/v1581441981/Anicons/anicons-regular.css" rel="stylesheet">
-<meta name="twitter:title" content="NETLIINKS S.A. | Networking & Security">
-<meta name="twitter:description" content="Offering our services for individuals or groups.">
-<meta name="twitter:image" content="images/elly-brian-s_C8yBxJyvM-unsplash.jpg">
-<meta name="twitter:card" content="summary_large_image">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="fonts/Inter/inter.css">
-    <script src="scripts/vendors/feather.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <meta property="og:title" content="NETLIINKS S.A. | Networking &amp; Security"/>
+    <meta property="og:description" content="Offering our services for individuals or groups."/>
+    <meta property="og:image" content="images/collin-armstrong-8FxJi5wuwKc-unsplash.jpg"/>
+    <meta property="og:url" content="https://alecastillo96.github.io/NETLIINKSSA/"/>
+    <meta name="twitter:title" content="NETLIINKS S.A. | Networking &amp; Security"/>
+    <meta name="twitter:description" content="Offering our services for individuals or groups."/>
+    <meta name="twitter:image" content="images/collin-armstrong-8FxJi5wuwKc-unsplash.jpg"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <link rel="stylesheet" href="src/styles/main.css" type="text/css"/>
+    <link rel="stylesheet" href="src/fonts/Inter/inter.css" type="text/css"/>
+    <link rel="stylesheet" href="src/fonts/Anicons/anicons.css" type="text/css"/>
+    <script src="src/scripts/NTL01.js"></script>
+    <script src="src/scripts/vendors/feather.js"></script>
   </head>
   <body>
     <header id="index">
-      <div class="container"><img class="showcase-icon" src="images/logo.png">
+      <div class="container"><img class="header_showcase-image" src="src/pictures/logo.png"/>
         <h2>NETLIINKS S.A.</h2><small>Networking &amp; security</small>
       </div>
     </header>
-    <nav class="menu-bar"><a class="showcaseResp" href="index.html">Netliinks</a>
-      <div class="toggle" onclick="toggleMenu()" role="button"></div>
-      <div class="toggleMenu">A</div>
-      <ul class="navigation">
-        <li><a href="404.html">Servicios</a></li>
-        <li><a href="404.html">Actividades</a></li>
-        <li class="showcase"><a href="index.html">Netliinks</a></li>
-        <li><a href="about.html">Acerca de</a></li>
-        <li><a href="mailto:info@netliinks.com" target='_blank' rel='noopener noreferrer'>Contacto</a></li>
-        <div class="right">
-          <li><input type="checkbox" class="toggleDarkMode" onclick="switchDarkMode()"></li>
-        </div>
-      </ul>
-    </nav><br>
-    <div class="container container_tinted" id="security">
-      <div class="container-grilled"><img class="flex-item" src="images/milosz-klinowski-BW0d0IllW8E-unsplash.png" alt="NETLIINKS SECURITY">
+    <nav class="navbar">
+      <div class="navbar_wrapper">
+        <ul class="navbar_menu">
+          <div>
+            <li><a class="active" href="index.html">Servicios</a></li>
+            <li><a href="index.html">Descargas</a></li>
+            <li><a href="index.html">Acerca de</a></li>
+            <li><a href="mailto:info@netliinks.com" target="_black" rel="nooperner noreferrer">Contacto</a></li>
+          </div>
+        </ul>
+        <ul class="navbar_showcase-text"><li><a href="index.html">Netliinks S.A.</a></li></ul>
+        <ul class="navbar_settings">
+          <input type="checkbox"/>
+        </ul>
+      </div>
+    </nav><br/>
+    <div class="container container-tinted" id="security">
+      <div class="grid-2-col"><img class="image" alt="NETLIINKS S.A." src="src/pictures/picture1.png"/>
         <div class="content">
-          <h2 class="title-indicator_left">Sistemas de seguridad</h2>
-          <p class="text_left" id="cont1"></p><br> <button onclick="openModal('seguridad')" class="btn btn-modal btn_small btn-primary"> <span>Ver más</span> <i class="icon" data-feather="arrow-right"></i></button>
+          <h2 class="title-left">Sistemas de seguridad</h2>
+          <p class="text-left" id="cont1">I'm baby hashtag banjo intelligentsia, trust fund green juice chia 8-bit adaptogen farm-to-table. Typewriter vinyl asymmetrical listicle trust fund shoreditch disrupt hexagon man braid hoodie. Succulents affogato photo booth deep v, heirloom art party portland humblebrag la croix chartreuse live-edge lumbersexual knausgaard. Four loko cred helvetica hexagon schlitz tattooed.</p>
+          <button class="btn btn-modal btn-small btn-primary" onclick="openModal('security')"><span>ver más</span><i class="btn-right-icon"></i></button>
         </div>
       </div>
     </div>
     <div class="container" id="networking">
-      <div class="container-grilled">
+      <div class="grid-2-col">
         <div class="content">
-          <h2 class="title-indicator_right">Networking</h2>
-          <p class="text_right" id="cont2"></p><button onclick="openModal('networking')" class="btn btn-modal btn-primary align_right btn_small"> <span>Ver más</span> <i class="icon" data-feather="arrow-right"></i></button>
-        </div><img class="flex-item" src="images/jordan-harrison-40XgDxBfYXM-unsplash.png" alt="NETLIINKS NETWORKING">
+          <h2 class="title-right">Networking </h2>
+          <p class="text-right" id="cont2">I'm baby hashtag banjo intelligentsia, trust fund green juice chia 8-bit adaptogen farm-to-table. Typewriter vinyl asymmetrical listicle trust fund shoreditch disrupt hexagon man braid hoodie. Succulents affogato photo booth deep v, heirloom art party portland humblebrag la croix chartreuse live-edge lumbersexual knausgaard. Four loko cred helvetica hexagon schlitz tattooed.</p>
+          <button class="btn btn-modal btn-small btn-primary" onclick="openModal('networking')"><span>ver más</span><i class="btn-right-icon"></i></button>
+        </div><img class="image" alt="NETLIINKS S.A." src="src/pictures/picture2.png"/>
       </div>
     </div>
-    <div class="container container_tinted" id="ti">
-      <div class="container-grilled"><img class="flex-item" src="images/elly-brian-s_C8yBxJyvM-unsplash.png" alt="NETLIINKS SECURITY">
+    <div class="container container-tinted" id="ti">
+      <div class="grid-2-col"><img class="image" alt="NETLIINKS S.A." src="src/pictures/picture3.jpg"/>
         <div class="content">
-          <h2 class="text_left title-indicator_left">Soporte técnico</h2>
-          <p class="text-to-left limitado" id="cont3"></p><button onclick="openModal('soporteTecnico')" class="btn btn-modal btn_small btn-primary"> <span>Ver más</span> <i class="icon" data-feather="arrow-right"></i></button>
+          <h2 class="title-left">Soporte Técnico</h2>
+          <p class="text-left" id="cont3">I'm baby hashtag banjo intelligentsia, trust fund green juice chia 8-bit adaptogen farm-to-table. Typewriter vinyl asymmetrical listicle trust fund shoreditch disrupt hexagon man braid hoodie. Succulents affogato photo booth deep v, heirloom art party portland humblebrag la croix chartreuse live-edge lumbersexual knausgaard. Four loko cred helvetica hexagon schlitz tattooed.</p>
+          <button class="btn btn-modal btn-small btn-primary" onclick="openModal('soporteti')"><span>ver más</span><i class="btn-right-icon"></i></button>
         </div>
       </div>
     </div>
     <div class="container" id="software">
-      <div class="container-grilled">
+      <div class="grid-2-col">
         <div class="content">
-          <h2 class="text_right title-indicator_right">Desarrollo de software</h2>
-          <p class="text_right" id="cont4"></p><button onclick="openModal('desarrollo')" class="btn btn-modal align_right btn_small btn-primary"> <span>Ver más</span> <i class="icon" data-feather="arrow-right"></i></button>
-        </div><img class="flex-item" src="images/ilya-pavlov-OqtafYT5kTw-unsplash.png" alt="NETLIINKS NETWORKING">
+          <h2 class="title-right">Desarrollo de software</h2>
+          <p class="text-right" id="cont2">I'm baby hashtag banjo intelligentsia, trust fund green juice chia 8-bit adaptogen farm-to-table. Typewriter vinyl asymmetrical listicle trust fund shoreditch disrupt hexagon man braid hoodie. Succulents affogato photo booth deep v, heirloom art party portland humblebrag la croix chartreuse live-edge lumbersexual knausgaard. Four loko cred helvetica hexagon schlitz tattooed.</p>
+          <button class="btn btn-modal btn-small btn-primary" onclick="openModal('develop')"><span>ver más</span><i class="btn-right-icon"></i></button>
+        </div><img class="image" alt="NETLIINKS S.A." src="src/pictures/picture4.png"/>
       </div>
     </div>
-    <div class="modal-container" id="modal-desarrollo">
-      <div class="modal">
-        <h1>Desarrollo de software</h1><br>
-        <p id="softwareDevelopmentModal"></p><br>
-        <button class="btn btn-primary btn_small" onclick="closeModal('desarrollo')">Cerrar</button>
-      </div>
-    </div>
-    <div class="modal-container" id="modal-soporteTecnico">
-      <div class="modal">
-        <h1>Soporte Tecnico</h1><br>
-        <p id="itModal"></p><br>
-        <button class="btn btn-primary btn_small" onclick="closeModal('soporteTecnico')">Cerrar</button>
-      </div>
-    </div>
-    <div class="modal-container" id="modal-seguridad">
-      <div class="modal">
-        <h1>Sistemas de seguridad</h1><br>
-        <p id="securitySystemsModal"></p><br>
-        <button class="btn btn-primary btn_small" onclick="closeModal('seguridad')">Cerrar</button>
-      </div>
-    </div>
-    <div class="modal-container" id="modal-networking">
-      <div class="modal">
-        <h1>Networking</h1><br>
-        <p id="networkingModal"></p><br>
-        <button class="btn btn-primary btn_small" onclick="closeModal('networking')">Cerrar</button>
-      </div>
-    </div>
-    <div class="newsbar">
-      <div class="container">
-        <button class="toggler"><i class="right" data-feather="chevron-right" animation="rotate-chevron"></i>
-          <div class="caption">Click aquí para ver las novedades del mes 🚀</div>
-        </button>
-        <div class="toggler-content">
-          <p>👨🏻‍💻 La app <b>NetGuard</b> ahora se adapta para trabajar en tablets!</p>
-          <p>📚 Ya están disponibles las instrucciones de las apps <a href="#">aquí</a>.</p>
-          <p>💸 <b>Solo por hoy</b> 25% de descuento en todos nuestros productos.</p>
-        </div>
-      </div>
-    </div>
-    <div class="submit">
-      <div class="container">
-        <div class="message"><img class="newsletterIcon" src="images/newsletter.png">
-          <h1>suscríbete</h1>
+    <div class="subscribe-section">
+      <div class="container container-tinted">
+        <div class="subscribe-title"><img class="newsletter-icon" src="src/pictures/newsletter.png"/>
+          <h1>Suscríbete</h1>
           <p>Suscríbete a nuestro feed de noticias y mantente actualizado.</p><br><br>
           <form>
-            <div class="input-field">
-              <input class="mailInput" type="email" required="">
+            <fieldset>
+              <input class="subscribe-input" type="email" required=""/>
               <label>Por favor, ingrese su email</label><span></span>
-            </div><br>
-            <input class="btn btn_small btn-primary" type="submit" value="enviar" id="sendMailButton">
+            </fieldset>
+            <input class="btn btn-small btn-primary" id="subscribeMail" type="submit" value="enviar"/>
           </form>
-          <div class="mail-alert" id="mailAlert"></div>
+          <div class="mail-alert" id="mail-alert"></div>
         </div>
       </div>
     </div>
-    <footer class="foo">
-      <div class="container">
-        <div class="pre">
-          <div class="foo-brand"><img class="foo-logo dark" src="images/logo.png"><img class="foo-logo light" src="images/logo.png">
-            <div class="brand">
-              <p>NETLIINKS S.A.</p><small>Networking &amp; security</small>
-            </div>
-          </div>
-          <div class="aw3d42"><a class="gotoapps" href="applications.html"><i data-feather="box" class="box-foo"></i> <span>Aplicaciones</span></a></div>
-        </div>
-        <div class="foo_navigation">
-          <nav class="foo-bar">
-            <ul class="left">
-              <li><a href="#index">Inicio <i data-feather="chevrons-up" class="chevron-up"></i></a></li>
-            </ul>
-            <ul class="right">
-              <li><a href="404.html">Servicios</a></li>
-              <li><a href="404.html">Actividades</a></li>
-              <li><a href="404.html">Acerca de</a></li>
-              <li><a href="404.html">Contacto</a></li>
-              <li><a href="404.html">Soporte</a></li>
-            </ul>
-          </nav>
-        </div>
-        <div class="copy">
-          <p class="copyright">&copy; 2021 Netliinks S.A.</p>
-        </div>
-      </div>
-    </footer><script src="content.js"></script>
-<script src="scripts/rendercontent.js"></script>
-<script src="scripts/app.js"></script>
   </body>
 </html>

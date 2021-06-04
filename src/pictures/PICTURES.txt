@@ -1,0 +1,26 @@
+Picture1 = milosz-klinowski-BW0d0IllW8E-unsplash.png
+Picture2 = jordan-harrison-40XgDxBfYXM-unsplash.png
+Picture3 = roman-spiridonov-FemeYrbdMWE-unsplash.jpg
+Picture4 = ilya-pavlov-OqtafYT5kTw-unsplash.png
+
+BABEL = JAVASCRIPT COMPATIBLE CON TODOS LOS NAVEGADORES
+ECMASCRIPT= es la especificación de un lenguaje de scripting
+
+Apareció en1 1997
+Version 5 en 2009
+Versión 6 2015 y se la renombre ES2015
+
+¿COMO SE LE PUEDEN AÑADIR CARACTERÍSTICAS AL LENGUAJE?
+Se hace mediante un mecanismo de proposals o propuestas que pasa por cinco etapas
+
+
+Proposals:
+Stage 0
+Stage 1
+Stage 2
+Stage 3
+Stage 4 🎉 -> ESNext
+ 
+
+
+BABEL:

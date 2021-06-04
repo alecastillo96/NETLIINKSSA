@@ -1,0 +1,393 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, a, p, h1, h2, h3, h4, h5, div, span, button, input {
+  font-family: "Inter", sans-serif;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+h1, h2, h3, h4, h5, b {
+  color: #303030;
+}
+
+h1 {
+  font-size: 42.724609375px;
+  line-height: 59.8145129395px;
+}
+
+h2 {
+  font-size: 34.1796875px;
+  line-height: 47.8516103516px;
+}
+
+h3 {
+  font-size: 27.34375px;
+  line-height: 38.2812882813px;
+}
+
+h4 {
+  font-size: 21.875px;
+  line-height: 30.625030625px;
+}
+
+h5 {
+  font-size: 17.5px;
+  line-height: 24.5000245px;
+}
+
+p {
+  font-size: 14px;
+  line-height: 1.75;
+  color: #5e5e5e;
+}
+
+a {
+  text-decoration: none;
+  color: #3cc3b1;
+}
+
+input {
+  outline: none;
+}
+
+.container {
+  padding: 32pt 32pt;
+  width: 100%;
+  max-width: 1360px;
+  margin: auto;
+}
+
+.container-tinted {
+  background-color: #f2f2f2;
+  border-radius: 20px;
+}
+
+.grid-2-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 40pt;
+}
+.grid-2-col .image {
+  width: 100%;
+  border-radius: 8px;
+  cursor: no-drop;
+  pointer-events: none;
+}
+.grid-2-col .grid-item {
+  padding: 10px;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 55vh;
+  text-align: center;
+}
+
+#index {
+  background: rgba(20, 20, 20, 0.4) url("../pictures/collin-armstrong-8FxJi5wuwKc-unsplash.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+}
+#index small {
+  font-size: 27.34375px;
+  font-weight: 200;
+  font-style: italic;
+  letter-spacing: -2px;
+  color: #f2f2f2;
+}
+#index h2 {
+  color: #f2f2f2;
+}
+#index .header_showcase-image {
+  display: block;
+  height: 150px;
+  max-height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+}
+
+/*
+  BUTTONS
+*/
+.btn, input[type=submit], input[type=button] {
+  display: inline-block;
+  cursor: pointer;
+  overflow: hidden;
+  border: 1px solid;
+  font-family: "Inter", sans-serif;
+  font-weight: bolder;
+  text-transform: uppercase;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+
+.btn-primary {
+  background-color: #3cc3b1;
+  border-color: rgba(60, 195, 177, 0.7) !important;
+  color: #f2f2f2;
+}
+.btn-primary:hover {
+  background-color: rgba(60, 195, 177, 0.5);
+}
+.btn-primary:active {
+  background-color: rgba(60, 195, 177, 0.2);
+  color: #3cc3b1;
+}
+.btn-modal {
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: flex;
+  margin: 25px 0 0 0;
+}
+.btn-modal .icon {
+  margin-left: 10px;
+  height: 18px;
+}
+.btn-small {
+  font-size: 0.75rem;
+  height: 1.875rem;
+  line-height: calc(1.875rem - 1px * 2);
+  border-radius: 0.25rem;
+  padding: 0 1rem;
+}
+.btn-mid {
+  font-size: 0.875rem;
+  height: 2.5rem;
+  line-height: calc(2.5rem - 1px * 2);
+  border-radius: 0.25rem;
+  padding: 0 1.25rem;
+}
+.btn-large {
+  font-size: 1rem;
+  height: 3.125rem;
+  line-height: calc(1.875rem - 1px * 2);
+  border-radius: 0.25rem;
+  padding: 0 1.75rem;
+}
+
+.navbar {
+  display: block;
+  background-color: rgba(242, 242, 242, 0.8);
+  position: sticky;
+  -webkit-backdrop-filter: blur(5px) saturate(5%);
+          backdrop-filter: blur(5px) saturate(5%);
+  top: 0;
+  padding: 8px 0;
+  z-index: 999;
+}
+.navbar_wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+  max-width: 1366px;
+  margin: auto;
+}
+.navbar_menu {
+  list-style: none;
+}
+.navbar_menu li {
+  float: left;
+}
+.navbar_menu li .active {
+  font-weight: bolder;
+}
+.navbar_menu a {
+  display: block;
+  color: #141414;
+  padding: 10px 15px;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+.navbar_menu a:hover {
+  color: #3cc3b1;
+}
+.navbar_showcase-text {
+  list-style: none;
+}
+.navbar_showcase-text li {
+  text-align: center;
+}
+.navbar_showcase-text a {
+  display: block;
+  margin: auto;
+  padding: 10px 20px;
+  color: #141414;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+.navbar_settings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 100%;
+  height: 100%;
+}
+.navbar_settings input[type=checkbox] {
+  border: none;
+  height: 24px;
+  width: 24px;
+  margin: 0 15px 0 0;
+  position: relative;
+}
+.navbar_settings input[type=checkbox]::before {
+  content: "";
+  display: block;
+  background: url("../pictures/moon.svg");
+  background-size: 100%;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+.navbar_settings input[type=checkbox]:checked::before {
+  background: url("../pictures/sun.svg") center;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+
+.subscribe-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  z-index: 0;
+}
+
+.newsletter-icon {
+  display: block;
+  margin: 10px auto 35px auto;
+}
+
+.subscribe-title h1 {
+  text-transform: uppercase;
+  font-size: 2.8rem;
+}
+.subscribe-title p {
+  font-size: 1.2em;
+}
+.subscribe-title form {
+  display: block;
+  width: 100%;
+  max-width: 500%;
+  margin: auto;
+}
+.subscribe-title form fieldset {
+  position: relative;
+  height: 40px;
+  width: 500px;
+  margin: auto;
+  border: none;
+}
+.subscribe-title form fieldset label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  display: block;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  color: #5e5e5e;
+  font-style: italic;
+}
+.subscribe-title form fieldset span {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: block;
+  background: rgba(60, 195, 177, 0.5);
+  width: 100%;
+  height: 2px;
+}
+.subscribe-title form fieldset span::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+.subscribe-input {
+  position: absolute;
+  left: 0;
+  background: transparent;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  font-size: 16px;
+  width: 100%;
+  color: #303030;
+}
+.subscribe-input:focus + span::before, .subscribe-input:valid + span::before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+.subscribe-input:focus + label, .subscribe-input:valid + label {
+  -webkit-transform: translateY(-35px);
+          transform: translateY(-35px);
+  font-size: 14px;
+  color: #3cc3b1;
+  background: rgba(60, 195, 177, 0.2);
+  border-radius: 5px;
+  padding: 2px 6px;
+}
+
+#subscribeMail {
+  margin-top: 30px;
+}
