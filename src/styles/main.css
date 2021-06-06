@@ -276,6 +276,10 @@ header {
   transition: 0.3s all ease;
 }
 
+.remove-transparency {
+  background: #f2f2f2 !important;
+}
+
 .subscribe-section {
   display: -webkit-box;
   display: -ms-flexbox;

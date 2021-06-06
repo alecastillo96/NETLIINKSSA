@@ -46,10 +46,10 @@ window.onload = function () {
   };
 
   var detectNavigator = function detectNavigator() {
-    if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1 == true) {
-      console.log('es Firefox');
-    } else {
-      console.log('no es');
+    if (navigator.userAgent.indexOf('Firefox/80.0') > -1 == true && navigator.userAgent.indexOf('Firefox') > -1 == true) {
+      var navigationFirefox = document.querySelector('.navbar');
+      navigationFirefox.classList.add('remove-transparency');
+      console.log(navigator.userAgent);
     }
   };
 
