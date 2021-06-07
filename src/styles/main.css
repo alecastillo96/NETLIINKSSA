@@ -294,6 +294,10 @@ header {
 }
 
 @media screen and (max-height: 818px) {
+  #downloads {
+    background: url("../pictures/map_dark.png") center;
+    background-size: cover;
+  }
   #downloads .grid-2-col {
     grid-template-columns: 1fr !important;
   }
@@ -301,6 +305,29 @@ header {
     width: 100%;
     max-width: 700px;
     margin: auto;
+  }
+  #downloads .grid-item h1, #downloads .grid-item p {
+    color: #f2f2f2;
+  }
+  #downloads .image {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 1048px) {
+  #downloads {
+    background: url("../pictures/map_dark.png") center;
+    background-size: cover;
+  }
+  #downloads .grid-2-col {
+    grid-template-columns: 1fr !important;
+  }
+  #downloads .grid-item {
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+  }
+  #downloads .grid-item h1, #downloads .grid-item p {
+    color: #f2f2f2;
   }
   #downloads .image {
     display: none !important;
