@@ -124,6 +124,18 @@ header {
   margin-bottom: 30px;
 }
 
+#downloads .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+#downloads .grid-2-col .grid-item {
+  text-align: left;
+}
+#downloads .grid-2-col .image {
+  display: block;
+}
+
 /*
   BUTTONS
 */
@@ -200,7 +212,8 @@ header {
 }
 .navbar_wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr -webkit-max-content 1fr;
+  grid-template-columns: 1fr max-content 1fr;
   width: 100%;
   max-width: 1366px;
   margin: auto;
@@ -278,6 +291,35 @@ header {
 
 .remove-transparency {
   background: #f2f2f2 !important;
+}
+
+@media screen and (max-height: 818px) {
+  #downloads .grid-2-col {
+    grid-template-columns: 1fr !important;
+  }
+  #downloads .grid-item {
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+  }
+  #downloads .image {
+    display: none !important;
+  }
+}
+.minHeight-header {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.minHeight-header .grid-2-col {
+  grid-template-columns: 1fr !important;
+}
+.minHeight-header .grid-item {
+  width: 100%;
+  max-width: 700px;
+  margin: auto;
+}
+.minHeight-header .image {
+  display: none !important;
 }
 
 .subscribe-section {
@@ -418,7 +460,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: rgba(20, 20, 20, 0.2);
+  background-color: rgba(60, 195, 177, 0.2);
   border-radius: 3px;
   color: #141414;
   display: -webkit-box;
