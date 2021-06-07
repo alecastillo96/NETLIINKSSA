@@ -54,6 +54,11 @@ window.onload = function () {
   };
 
   detectNavigator(); // TODO: Switch darkmode
-  // Display news toggler
+
+  var themeSwitch = document.getElementById('toggleTheme');
+  themeSwitch.addEventListener('click', function () {
+    var htmlDocument = document.getElementsByTagName('html');
+    htmlDocument[0].classList.toggle('dark');
+  }); // Display news toggler
   // Practice more JavaScript
 };
