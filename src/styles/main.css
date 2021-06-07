@@ -58,6 +58,43 @@ input {
   outline: none;
 }
 
+.title-left {
+  padding-left: 20px;
+  position: relative;
+}
+.title-left::before {
+  content: "";
+  height: 100%;
+  width: 10px;
+  background: #3cc3b1;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.title-right {
+  padding-right: 20px;
+  text-align: right;
+  position: relative;
+}
+.title-right::before {
+  content: "";
+  height: 100%;
+  width: 10px;
+  background: #3cc3b1;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.title-left, .title-right {
+  margin-bottom: 20px;
+}
+
+.text-right {
+  text-align: right;
+}
+
 .container {
   padding: 32pt 32pt;
   width: 100%;
@@ -136,6 +173,50 @@ header {
   display: block;
 }
 
+@media screen and (max-height: 818px) {
+  #downloads {
+    background: url("../pictures/map_dark.png") center;
+    background-size: cover;
+  }
+  #downloads .grid-2-col {
+    grid-template-columns: 1fr !important;
+  }
+  #downloads .grid-item {
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+  }
+  #downloads .grid-item h1, #downloads .grid-item p {
+    color: #f2f2f2;
+  }
+  #downloads .image {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 1048px) {
+  #downloads {
+    background: url("../pictures/map_dark.png") center;
+    background-size: cover;
+  }
+  #downloads .grid-2-col {
+    grid-template-columns: 1fr !important;
+  }
+  #downloads .grid-item {
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+  }
+  #downloads .grid-item h1, #downloads .grid-item p {
+    color: #f2f2f2;
+  }
+  #downloads .image {
+    display: none !important;
+  }
+  #downloads .btn-primary {
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+  }
+}
 /*
   BUTTONS
 */
@@ -291,62 +372,6 @@ header {
 
 .remove-transparency {
   background: #f2f2f2 !important;
-}
-
-@media screen and (max-height: 818px) {
-  #downloads {
-    background: url("../pictures/map_dark.png") center;
-    background-size: cover;
-  }
-  #downloads .grid-2-col {
-    grid-template-columns: 1fr !important;
-  }
-  #downloads .grid-item {
-    width: 100%;
-    max-width: 700px;
-    margin: auto;
-  }
-  #downloads .grid-item h1, #downloads .grid-item p {
-    color: #f2f2f2;
-  }
-  #downloads .image {
-    display: none !important;
-  }
-}
-@media screen and (max-width: 1048px) {
-  #downloads {
-    background: url("../pictures/map_dark.png") center;
-    background-size: cover;
-  }
-  #downloads .grid-2-col {
-    grid-template-columns: 1fr !important;
-  }
-  #downloads .grid-item {
-    width: 100%;
-    max-width: 700px;
-    margin: auto;
-  }
-  #downloads .grid-item h1, #downloads .grid-item p {
-    color: #f2f2f2;
-  }
-  #downloads .image {
-    display: none !important;
-  }
-}
-.minHeight-header {
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-.minHeight-header .grid-2-col {
-  grid-template-columns: 1fr !important;
-}
-.minHeight-header .grid-item {
-  width: 100%;
-  max-width: 700px;
-  margin: auto;
-}
-.minHeight-header .image {
-  display: none !important;
 }
 
 .subscribe-section {

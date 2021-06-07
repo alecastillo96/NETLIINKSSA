@@ -53,24 +53,7 @@ window.onload = function () {
     }
   };
 
-  window.addEventListener('resize', function () {
-    var header = document.querySelector('#downloads');
-
-    if (window.innerHeight <= 818) {
-      header.classList.add('minHeight-header');
-    } else {
-      header.classList.remove('minHeight-header');
-    }
-  });
-  var windowHeight = window.innerHeight;
-
-  window.onload = function () {
-    if (windowHeight <= 818) {
-      header.classList.add('minHeight-header');
-    } else {
-      header.classList.remove('minHeight-header');
-    }
-  };
-
-  detectNavigator();
+  detectNavigator(); // TODO: Switch darkmode
+  // Display news toggler
+  // Practice more JavaScript
 };
