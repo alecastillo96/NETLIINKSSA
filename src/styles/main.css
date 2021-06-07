@@ -398,6 +398,7 @@ header {
 
 .foo {
   background-color: #f2f2f2;
+  margin-top: 32pt;
 }
 .foo-logo {
   display: block;
@@ -409,4 +410,101 @@ header {
 .foo .light {
   -webkit-filter: invert(1);
           filter: invert(1);
+}
+.foo p {
+  color: black;
+}
+.foo .gotoapps {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(20, 20, 20, 0.2);
+  border-radius: 3px;
+  color: #141414;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 10px;
+  padding: 5px;
+  text-transform: uppercase;
+}
+.foo .pre {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.foo_navigation {
+  padding: 20px 20px;
+  margin: 15px 15px;
+  border-bottom: 1px solid rgba(20, 20, 20, 0.5);
+  border-top: 1px solid rgba(20, 20, 20, 0.5);
+}
+.foo-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.foo-bar .right {
+  list-style: none;
+}
+.foo-bar .right li {
+  display: inline-block;
+}
+.foo-bar .right li a {
+  color: #141414;
+  font-size: 11px;
+  padding: 0 5px;
+}
+.foo-bar .right li .active {
+  font-weight: bolder;
+}
+.foo-bar .left {
+  list-style: none;
+}
+.foo-bar .left li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.foo-bar .left a {
+  color: #141414;
+  font-size: 11px;
+}
+.foo-bar .left a:hover {
+  color: #3cc3b1;
+}
+.foo-brand {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.foo-brand .brand {
+  margin-left: 10px;
+}
+.foo-brand .brand p {
+  font-weight: bolder;
+  line-height: 18px;
+}
+.foo-brand .brand small {
+  line-height: 18px;
+  color: #141414;
+}
+.foo-logo {
+  display: block;
+  height: 35px;
 }
