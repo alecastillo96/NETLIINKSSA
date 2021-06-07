@@ -395,3 +395,18 @@ header {
 #subscribeMail {
   margin-top: 30px;
 }
+
+.foo {
+  background-color: #f2f2f2;
+}
+.foo-logo {
+  display: block;
+  height: 35px;
+}
+.foo .dark {
+  display: none;
+}
+.foo .light {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
