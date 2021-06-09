@@ -18,9 +18,6 @@ window.onload = function () {
       alert.classList.remove('mail-alert-error');
       alert.innerHTML = "<span><b>".concat(ms, "</b> te has suscrito \uD83C\uDF89</span>");
       alert.classList.add('mail-alert-success');
-      setTimeout(function () {
-        mailInput.value = "";
-      }, 200);
     }
   });
 
@@ -35,7 +32,7 @@ window.onload = function () {
       error[0] = true;
       error[1] = "<i><b>Error:</b> parece que esta no es una dirección de correo válida. <b><code>Falta: arroba</code><b></i>";
       return error;
-    } else if (mailInput.value.indexOf(".") === -1) {
+    } else if (mailInput.value.indexOf('.') === -1) {
       error[0] = true;
       error[1] = "<i><b>Error:</b> parece que esta no es una dirección de correo válida. <b><code>Falta: punto</code><b></i></i>";
       return error;
@@ -54,11 +51,40 @@ window.onload = function () {
   };
 
   detectNavigator(); // TODO: Switch darkmode
+  // 'html', 'dark', 'toggleTheme'
 
-  var themeSwitch = document.getElementById('toggleTheme');
-  themeSwitch.addEventListener('click', function () {
-    var htmlDocument = document.getElementsByTagName('html');
-    htmlDocument[0].classList.toggle('dark');
-  }); // Display news toggler
+  var switchDarkMode = document.getElementById('toggleTheme');
+  switchDarkMode.addEventListener('click', function () {
+    var HTMLTag = document.querySelector('html');
+
+    if (HTMLTag.classList.contains('dark') == false) {
+      HTMLTag.classList.add('dark');
+    } else {
+      HTMLTag.classList.remove('dark');
+    }
+
+    var status = HTMLTag.classList.contains('dark');
+
+    if (status == true) {
+      localStorage.setItem('dark-mode', status);
+    } else {
+      localStorage.setItem('dark-mode', status);
+    }
+  });
+
+  var saveDarkModeStatus = function saveDarkModeStatus() {
+    var HTMLTag = document.querySelector('html');
+    var status = JSON.parse(localStorage.getItem('dark-mode'));
+
+    if (status == true) {
+      HTMLTag.classList.add('dark');
+    } else {
+      HTMLTag.classList.remove('dark');
+    }
+
+    console.log(status);
+  };
+
+  saveDarkModeStatus(); // Display news toggler
   // Practice more JavaScript
 };

@@ -350,29 +350,15 @@ header {
   width: 100%;
   height: 100%;
 }
-.navbar_settings input[type=checkbox] {
+.navbar_settings input[type=button] {
   border: none;
   height: 24px;
   width: 24px;
   margin: 0 15px 0 0;
   position: relative;
-}
-.navbar_settings input[type=checkbox]::before {
-  content: "";
-  display: block;
   background: url("../pictures/moon.svg");
   background-size: 100%;
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  cursor: pointer;
-  -webkit-transition: 0.3s all ease;
-  transition: 0.3s all ease;
-}
-.navbar_settings input[type=checkbox]:checked::before {
-  background: url("../pictures/sun.svg") center;
-  -webkit-transition: 0.3s all ease;
-  transition: 0.3s all ease;
+  background-position: center;
 }
 
 .remove-transparency {
@@ -610,6 +596,10 @@ header {
   height: 35px;
 }
 
+.dark {
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
 .dark html, .dark body {
   background-color: #141414;
 }
@@ -625,8 +615,16 @@ header {
 .dark .navbar a {
   color: #f2f2f2;
 }
+.dark .navbar_settings input[type=button] {
+  background: url("../pictures/sun.svg");
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
 .dark .container-tinted {
   background-color: #262626;
+}
+.dark .subscribe-input {
+  color: #f2f2f2;
 }
 .dark .foo {
   background-color: #262626;
@@ -640,4 +638,8 @@ header {
 }
 .dark .foo-bar .left li a, .dark .foo-bar .right li a {
   color: #f2f2f2;
+}
+.dark .foo_navigation {
+  border-top: 1px solid #737373;
+  border-bottom: 1px solid #737373;
 }
