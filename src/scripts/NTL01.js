@@ -18,6 +18,7 @@ window.onload = function () {
       alert.classList.remove('mail-alert-error');
       alert.innerHTML = "<span><b>".concat(ms, "</b> te has suscrito \uD83C\uDF89</span>");
       alert.classList.add('mail-alert-success');
+      mailInput.value = '';
     }
   });
 
@@ -26,15 +27,15 @@ window.onload = function () {
 
     if (mailInput.value.length < 5) {
       error[0] = true;
-      error[1] = "<i><b>Error:</b> el correo no puede contener menos de 5 caracteres.</i>";
+      error[1] = "<span>⚠️</span><i><b> Error:</b> el correo no puede contener menos de 5 caracteres.</i>";
       return error;
     } else if (mailInput.value.indexOf("@") === -1) {
       error[0] = true;
-      error[1] = "<i><b>Error:</b> parece que esta no es una dirección de correo válida. <b><code>Falta: arroba</code><b></i>";
+      error[1] = "<span>⚠️</span><i><b> Error:</b> parece que esta no es una dirección de correo válida. <b><code>Falta: arroba</code><b></i>";
       return error;
     } else if (mailInput.value.indexOf('.') === -1) {
       error[0] = true;
-      error[1] = "<i><b>Error:</b> parece que esta no es una dirección de correo válida. <b><code>Falta: punto</code><b></i></i>";
+      error[1] = "<span>⚠️</span><i><b> Error:</b> parece que esta no es una dirección de correo válida. <b><code>Falta: punto</code><b></i></i>";
       return error;
     }
 
@@ -50,9 +51,7 @@ window.onload = function () {
     }
   };
 
-  detectNavigator(); // TODO: Switch darkmode
-  // 'html', 'dark', 'toggleTheme'
-
+  detectNavigator();
   var switchDarkMode = document.getElementById('toggleTheme');
   switchDarkMode.addEventListener('click', function () {
     var HTMLTag = document.querySelector('html');
@@ -85,6 +84,13 @@ window.onload = function () {
     console.log(status);
   };
 
-  saveDarkModeStatus(); // Display news toggler
+  saveDarkModeStatus(); // Toggle Menu
+
+  var toggleMenu = document.getElementById('toggle-menu');
+  toggleMenu.addEventListener('click', function () {
+    var menu = document.getElementById('menu');
+    toggleMenu.classList.toggle('toggle-menu-active');
+    menu.classList.toggle('navbar-full-menu');
+  }); // Display news toggler
   // Practice more JavaScript
 };

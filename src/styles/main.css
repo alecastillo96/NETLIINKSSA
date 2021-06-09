@@ -97,7 +97,47 @@ input {
 
 ::-moz-selection {
   color: #f2f2f2;
-  bakcground-color: #3cc3b1;
+  background-color: #3cc3b1;
+}
+
+.mail-alert {
+  display: block;
+  border-radius: 5px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 20px auto;
+}
+.mail-alert-success {
+  color: #3cc3b1;
+  padding: 10px 20px;
+  background-color: rgba(60, 195, 177, 0.1);
+}
+.mail-alert-success b {
+  color: #63cfc1 !important;
+}
+.mail-alert-error {
+  color: #bf4040;
+  padding: 10px 20px;
+  background-color: rgba(191, 64, 64, 0.1);
+}
+.mail-alert-error b {
+  color: #cc6666 !important;
+}
+
+.toggle-menu {
+  font-family: "Anicons Regular", sans-serif;
+  font-variation-settings: "TIME" 1;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  color: #141414;
+  font-size: 24px;
+  top: 25%;
+  left: 15px;
+  position: absolute;
+}
+.toggle-menu-active {
+  font-variation-settings: "TIME" 100;
 }
 
 .container {
@@ -196,30 +236,6 @@ header {
   }
   #downloads .image {
     display: none !important;
-  }
-}
-@media screen and (max-width: 1048px) {
-  #downloads {
-    background: url("../pictures/map_dark.png") center;
-    background-size: cover;
-  }
-  #downloads .grid-2-col {
-    grid-template-columns: 1fr !important;
-  }
-  #downloads .grid-item {
-    width: 100%;
-    max-width: 700px;
-    margin: auto;
-  }
-  #downloads .grid-item h1, #downloads .grid-item p {
-    color: #f2f2f2;
-  }
-  #downloads .image {
-    display: none !important;
-  }
-  #downloads .btn-primary {
-    -webkit-backdrop-filter: blur(5px);
-            backdrop-filter: blur(5px);
   }
 }
 /*
@@ -323,6 +339,30 @@ header {
 .navbar_menu a:hover {
   color: #3cc3b1;
 }
+.navbar-full-menu {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: fixed;
+  border-top: 1px solid #adadad;
+  top: 55px;
+  height: 100vh;
+  width: 100%;
+  background-color: #f2f2f2;
+}
+.navbar-full-menu li {
+  margin: 15px 0;
+}
+.navbar-full-menu li a {
+  font-size: 18px;
+}
 .navbar_showcase-text {
   list-style: none;
 }
@@ -363,6 +403,24 @@ header {
 
 .remove-transparency {
   background: #f2f2f2 !important;
+}
+
+.toggle-menu {
+  display: none;
+  font-family: "Anicons Regular", sans-serif;
+  font-variation-settings: "TIME" 1;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  color: #141414;
+  font-size: 24px;
+  line-height: 16px;
+  top: 20px;
+  left: 15px;
+  position: absolute;
+  cursor: pointer;
+}
+.toggle-menu-active {
+  font-variation-settings: "TIME" 100;
 }
 
 .subscribe-section {
@@ -642,4 +700,53 @@ header {
 .dark .foo_navigation {
   border-top: 1px solid #737373;
   border-bottom: 1px solid #737373;
+}
+
+@media screen and (max-width: 1048px) {
+  #downloads {
+    background: url("../pictures/map_dark.png") center;
+    background-size: cover;
+  }
+  #downloads .grid-2-col {
+    grid-template-columns: 1fr !important;
+  }
+  #downloads .grid-item {
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+  }
+  #downloads .grid-item h1, #downloads .grid-item p {
+    color: #f2f2f2;
+  }
+  #downloads .image {
+    display: none !important;
+  }
+  #downloads .btn-primary {
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+  }
+}
+@media screen and (max-width: 1366px) {
+  .container {
+    border-radius: 0px;
+  }
+}
+@media screen and (max-width: 970px) {
+  .navbar {
+    position: fixed;
+    width: 100%;
+    background-color: #f2f2f2;
+    border-top: 1px solid #adadad !important;
+  }
+  .navbar_menu .toggle-menu {
+    display: block;
+  }
+  .navbar_menu #menu {
+    display: none;
+  }
+  .navbar-full-menu {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
 }
