@@ -48,7 +48,6 @@ var detectNavigator = function detectNavigator() {
   }
 };
 
-detectNavigator();
 var toggleDarkmode = document.getElementById('toggleTheme');
 toggleDarkmode.addEventListener('click', function () {
   var HTMLTag = document.querySelector('html');
@@ -79,4 +78,5 @@ var saveDarkModeStatus = function saveDarkModeStatus() {
   }
 };
 
+detectNavigator();
 saveDarkModeStatus();
