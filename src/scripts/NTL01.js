@@ -78,3 +78,5 @@ var saveDarkModeStatus = function saveDarkModeStatus() {
     HTMLTag.classList.remove('dark');
   }
 };
+
+saveDarkModeStatus();
