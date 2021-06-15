@@ -770,3 +770,6 @@ header {
     color: #f2f2f2;
   }
 }
+.block-right {
+  float: right;
+}
