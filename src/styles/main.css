@@ -543,6 +543,7 @@ header {
 .foo .light {
   -webkit-filter: invert(1);
           filter: invert(1);
+  display: inline-block;
 }
 .foo p {
   color: black;
@@ -572,6 +573,13 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+.foo .pre .logo {
+  display: block;
+  background-color: red;
+}
+.foo .pre .logo .brand {
+  float: left;
 }
 .foo_navigation {
   padding: 20px 20px;
@@ -618,29 +626,6 @@ header {
 }
 .foo-bar .left a:hover {
   color: #3cc3b1;
-}
-.foo-brand {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.foo-brand .brand {
-  margin-left: 10px;
-}
-.foo-brand .brand p {
-  font-weight: bolder;
-  line-height: 18px;
-}
-.foo-brand .brand small {
-  line-height: 18px;
-  color: #141414;
-}
-.foo-logo {
-  display: block;
-  height: 35px;
 }
 
 .dark {
