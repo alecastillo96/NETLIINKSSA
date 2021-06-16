@@ -125,21 +125,6 @@ input {
   color: #cc6666 !important;
 }
 
-.toggle-menu {
-  font-family: "Anicons Regular", sans-serif;
-  font-variation-settings: "TIME" 1;
-  -webkit-transition: 0.3s all ease;
-  transition: 0.3s all ease;
-  color: #141414;
-  font-size: 24px;
-  top: 25%;
-  left: 15px;
-  position: absolute;
-}
-.toggle-menu-active {
-  font-variation-settings: "TIME" 100;
-}
-
 .container {
   padding: 32pt 32pt;
   width: 100%;
@@ -220,7 +205,9 @@ header {
 
 @media screen and (max-height: 818px) {
   #downloads {
-    background: url("../pictures/map_dark.png") center;
+    background-blend-mode: multiply;
+    background-color: #141414;
+    background-image: url("../pictures/map_dark.png") center;
     background-size: cover;
   }
   #downloads .grid-2-col {
@@ -678,6 +665,9 @@ header {
 .dark .navbar #toggle-menu {
   color: #f2f2f2;
 }
+.dark .navbar .navbar-full-menu {
+  background-color: #141414;
+}
 .dark .navbar_settings input[type=button] {
   background: url("../pictures/sun.svg");
   -webkit-filter: invert(1);
@@ -711,6 +701,8 @@ header {
   #downloads {
     background: url("../pictures/map_dark.png") center;
     background-size: cover;
+    background-blend-mode: multiply;
+    background-color: rgba(20, 20, 20, 0.5);
   }
   #downloads .grid-2-col {
     grid-template-columns: 1fr !important;

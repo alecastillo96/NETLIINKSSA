@@ -41,6 +41,13 @@ var validateData = function validateData() {
   }
 };
 
+var toggleNavbar = document.getElementById('toggle-menu');
+toggleNavbar.addEventListener('click', function () {
+  var menu = document.getElementById('menu');
+  toggleNavbar.classList.toggle('toggle-menu-active');
+  menu.classList.toggle('navbar-full-menu');
+});
+
 var detectNavigator = function detectNavigator() {
   if (navigator.userAgent.indexOf('firefox/80.0') > -1 == true && navigator.userAgent.indexOf('Firefox') > -1 == true) {
     var navigationFirefox = document.querySelector('.navbar');
