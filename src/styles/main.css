@@ -182,7 +182,7 @@ header {
 }
 
 #index {
-  background: rgba(20, 20, 20, 0.4) url("../pictures/collin-armstrong-8FxJi5wuwKc-unsplash.jpg") no-repeat;
+  background: rgba(20, 20, 20, 0.5) url("../pictures/collin-armstrong-8FxJi5wuwKc-unsplash.jpg") no-repeat;
   background-size: cover;
   background-position: center;
   background-blend-mode: multiply;
@@ -675,6 +675,9 @@ header {
 .dark .navbar a {
   color: #f2f2f2;
 }
+.dark .navbar #toggle-menu {
+  color: #f2f2f2;
+}
 .dark .navbar_settings input[type=button] {
   background: url("../pictures/sun.svg");
   -webkit-filter: invert(1);
@@ -768,6 +771,89 @@ header {
 
   .navbar_showcase-text {
     color: #f2f2f2;
+  }
+
+  .grid-2-col {
+    grid-template-columns: 1fr;
+  }
+
+  #security {
+    background-blend-mode: multiply;
+    background-color: rgba(20, 20, 20, 0.9);
+    background-image: url("../pictures/picture1.png");
+    background-size: cover;
+    background-position: center;
+  }
+
+  #networking {
+    background-blend-mode: multiply;
+    background-color: rgba(20, 20, 20, 0.9);
+    background-image: url("../pictures/picture2.png");
+    background-size: cover;
+    background-position: center;
+  }
+
+  #ti {
+    background-blend-mode: multiply;
+    background-color: rgba(20, 20, 20, 0.9);
+    background-image: url("../pictures/picture3.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+
+  #software {
+    background-blend-mode: multiply;
+    background-color: rgba(20, 20, 20, 0.9);
+    background-image: url("../pictures/picture4.png");
+    background-size: cover;
+    background-position: center;
+  }
+
+  .container .image {
+    display: none;
+    padding: 20pt 10pt;
+  }
+
+  .container .content p {
+    text-align: justify;
+  }
+
+  p {
+    color: #bfbfbf;
+  }
+
+  h1, h2, h3, h4, h5, h6, b {
+    color: #fcfcfc !important;
+  }
+
+  .container .content {
+    color: #f2f2f2 !important;
+  }
+  .container .content .btn {
+    width: 100%;
+    padding: 20px 0px;
+  }
+  .container .content .btn span {
+    margin: 0 auto;
+  }
+
+  .title-right {
+    padding-left: 20px;
+    text-align: left;
+    position: relative;
+  }
+  .title-right::before {
+    content: "";
+    height: 100%;
+    width: 10px;
+    background: #3cc3b1;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .title-left, .title-right {
+    margin-bottom: 20px;
   }
 }
 .block-right {
