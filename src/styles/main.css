@@ -818,16 +818,14 @@ header {
     text-align: justify;
   }
 
-  p {
-    color: #bfbfbf;
-  }
-
-  h1, h2, h3, h4, h5, h6, b {
-    color: #fcfcfc !important;
-  }
-
   .container .content {
     color: #f2f2f2 !important;
+  }
+  .container .content p {
+    color: #bfbfbf;
+  }
+  .container .content h1, .container .content h2, .container .content h3, .container .content h4, .container .content h5, .container .content h6, .container .content b {
+    color: #fcfcfc !important;
   }
   .container .content .btn {
     width: 100%;

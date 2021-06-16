@@ -25,11 +25,11 @@ var validateData = function validateData() {
 
   if (mailInput.value.length < 5) {
     error[0] = true;
-    error[1] = "<li><span>⚠️</span><i><b> Error:</b> El correo no puede contener menos de 5 caracteres.</i> </li>";
+    error[1] = "<span>⚠️</span><i><b> Error:</b> El correo no puede contener menos de 5 caracteres.</i>";
     return error;
   } else if (mailInput.value.indexOf("@") === -1) {
     error[0] = true;
-    error[1] = "<li><span>⚠️</span><i><b> Error:</b> Parece que esta no es una dirección de correo válida <strong>Falta: arroba</strong></i> </li>";
+    error[1] = "<span>⚠️</span><i><b> Error:</b> Parece que esta no es una dirección de correo válida <strong>Falta: arroba</strong></i>";
     return error;
   } else if (mailInput.value.indexOf('.') === -1) {
     error[0] = true;
