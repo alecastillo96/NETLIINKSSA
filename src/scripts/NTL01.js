@@ -14,8 +14,9 @@ submitMail.addEventListener('click', function (e) {
     alert.innerHTML = "<span><b>".concat(error[1], "</span>");
     alert.classList.add('mail-alert-error');
   } else {
-    alert.classList.remove('mail-alert-success');
+    alert.classList.remove('mail-alert-error');
     alert.innerHTML = "<span><b>".concat(msg, "</b> te has subscrito \uD83C\uDF89 </span>");
+    alert.classList.add('mail-alert-success');
     mailInput.value = '';
   }
 });
@@ -83,7 +84,73 @@ var saveDarkModeStatus = function saveDarkModeStatus() {
   } else {
     HTMLTag.classList.remove('dark');
   }
+}; // C A R O U S E L
+
+
+var carouselContent = document.querySelectorAll('#carousel-img');
+var carIndicator = document.getElementById('carousel-indicator');
+var fragment = document.createDocumentFragment();
+var currentIndex = 0;
+
+for (var dots = 0; dots < carouselContent.length; dots++) {
+  var newDot = document.createElement('LI');
+  newDot.className = 'dtindicator';
+  newDot.setAttribute('id', parseInt(dots));
+  fragment.appendChild(newDot);
+}
+
+carIndicator.appendChild(fragment);
+var carIndicators = document.querySelectorAll('#carousel-indicator li');
+
+var renderImage = function renderImage() {
+  for (var cimg = 0; cimg < carouselContent.length; cimg++) {
+    carouselContent[cimg].style.display = 'none';
+  }
+
+  carouselContent[currentIndex].style.display = 'block';
 };
 
+var renderDots = function renderDots() {
+  for (var cdot = 0; cdot < carouselContent.length; cdot++) {
+    carIndicators[cdot].style.backgroundColor = '#8adbd0';
+  }
+
+  carIndicators[currentIndex].style.backgroundColor = '#3cc3b1';
+};
+
+document.getElementById('arrLft').addEventListener('click', function () {
+  if (currentIndex == 0) {
+    currentIndex = carouselContent.length - 1;
+  } else {
+    currentIndex--;
+  }
+
+  renderDots();
+  renderImage();
+});
+document.getElementById('arrRgth').addEventListener('click', function () {
+  if (currentIndex == carouselContent.length - 1) {
+    currentIndex = 0;
+  } else {
+    currentIndex++;
+  }
+
+  renderDots();
+  renderImage();
+});
+carIndicators.forEach(function (cind, i) {
+  cind.addEventListener('click', function () {
+    if (currentIndex == 0) {
+      currentIndex = i;
+    } else {
+      currentIndex = i;
+    }
+
+    renderImage();
+    renderDots();
+  });
+});
+renderDots();
+renderImage();
 detectNavigator();
 saveDarkModeStatus();

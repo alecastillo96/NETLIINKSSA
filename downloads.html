@@ -47,24 +47,28 @@
     <div class="container container-tinted" id="security">
       <div class="grid-2-col">
         <div class="carousel">
-          <div class="carousel-content"><img class="image" alt="NETLIINKS S.A." src="src/pictures/picture1.png"/></div>
+          <div class="carousel-arrows"><span id="arrLft"><i data-feather="chevron-left"></i></span><span id="arrRgth"><i data-feather="chevron-right"></i></span></div>
+          <div class="carousel-content"><img class="image" id="carousel-img" alt="NETLIINKS S.A." src="src/pictures/netliinks-imgs-render-1.png"/><img class="image" id="carousel-img" alt="NETLIINKS S.A." src="src/pictures/netliinks-imgs-render-2.png"/></div>
+          <ul id="carousel-indicator"></ul>
         </div>
         <div class="content">
           <h2 class="title-left">NetGuard</h2>
           <p class="text-left" id="cont1">I'm baby hashtag banjo intelligentsia, trust fund green juice chia 8-bit adaptogen farm-to-table. Typewriter vinyl asymmetrical listicle trust fund shoreditch disrupt hexagon man braid hoodie. Succulents affogato photo booth deep v, heirloom art party portland humblebrag la croix chartreuse live-edge lumbersexual knausgaard. Four loko cred helvetica hexagon schlitz tattooed.</p>
-          <button class="btn btn-modal btn-small btn-primary" onclick="window.open('https://play.google.com/store/apps/details?id=com.netlinks.netguard')"><span>ir a PlayStore</span><i class="btn-right-icon"></i></button>
+          <div class="btn-group">
+            <button class="btn btn-modal btn-small btn-primary" onclick="window.open('https://play.google.com/store/apps/details?id=com.netlinks.netguard')"><span>NetGuard en PlayStore</span></button>
+            <button class="btn btn-modal btn-small btn-primary" onclick="window.open('https://play.google.com/store/apps/details?id=com.netlinks.netvisitors')"><span>NetVisitors en PlayStore</span></button>
+          </div>
         </div>
       </div>
     </div>
-    <div class="container" id="networking">
+    <div class="container" id="policies">
       <div class="grid-2-col">
         <div class="content">
-          <h2 class="title-right">NetVisitors </h2>
-          <p class="text-right" id="cont2">I'm baby hashtag banjo intelligentsia, trust fund green juice chia 8-bit adaptogen farm-to-table. Typewriter vinyl asymmetrical listicle trust fund shoreditch disrupt hexagon man braid hoodie. Succulents affogato photo booth deep v, heirloom art party portland humblebrag la croix chartreuse live-edge lumbersexual knausgaard. Four loko cred helvetica hexagon schlitz tattooed.</p>
-          <button class="block-right btn btn-modal btn-small btn-primary" onclick="window.open('https://play.google.com/store/apps/details?id=com.netlinks.netvisitors')"><span>ir a PlayStore</span><i class="btn-right-icon"></i></button>
+          <h2 class="title-right">Políticas de privacidad</h2>
+          <p class="text-right" id="cont2">I'm baby hashtag banjo intelligentsia, trust fund green juice chia 8-bit adaptogen farm-to-table. Typewriter vinyl asymmetrical listicle trust fund shoreditch disrupt hexagon man braid hoodie. Succulents affogato photo booth deep v, heirloom art party portland humblebrag la croix chartreuse live-edge lumbersexual knausgaard. Four loko cred helvetica hexagon schlitz tattooed.<i class="btn-right-icon"></i></p>
         </div><img class="image" alt="NETLIINKS S.A." src="src/pictures/picture2.png"/>
       </div>
-    </div>
+    </div><br/>
     <div class="subscribe-section">
       <div class="container container-tinted">
         <div class="subscribe-title"><img class="newsletter-icon" src="src/pictures/newsletter.png"/>
@@ -107,5 +111,5 @@
     </footer>
   </body>
   <script src="src/scripts/NTL01.js"></script>
-  <script src="src/scripts/vendors/feather.js"></script>
+  <script src="src/scripts/vendors/feather.js"></script><script>feather.replace()</script>
 </html>
