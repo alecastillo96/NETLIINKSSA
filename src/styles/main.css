@@ -155,10 +155,6 @@ input {
 .carousel {
   position: relative;
 }
-.carousel-content #carousel-img {
-  -webkit-animation: appearCarItem 0.3s;
-          animation: appearCarItem 0.3s;
-}
 .carousel-arrows {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -209,27 +205,6 @@ input {
   cursor: pointer;
 }
 
-@-webkit-keyframes appearCarItem {
-  0% {
-    -webkit-filter: opacity(0);
-            filter: opacity(0);
-  }
-  100% {
-    -webkit-filter: opacity(1);
-            filter: opacity(1);
-  }
-}
-
-@keyframes appearCarItem {
-  0% {
-    -webkit-filter: opacity(0);
-            filter: opacity(0);
-  }
-  100% {
-    -webkit-filter: opacity(1);
-            filter: opacity(1);
-  }
-}
 header {
   display: -webkit-box;
   display: -ms-flexbox;
