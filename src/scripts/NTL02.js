@@ -2,34 +2,37 @@
 
 // C A R O U S E L
 var carouselItems = document.querySelectorAll('#carousel-img');
-var carouselIndicatorBar = document.getElementById('carousel-indicator');
+var CAROUSEL_INDICATORBAR = document.getElementById('carousel-indicator');
 var renderHTMLFragment = document.createDocumentFragment();
 var currentIndex = 0;
 
-for (var dts = 0; dts < carouselItems.length; dts++) {
-  var carouselIndicator = document.createElement('LI');
-  carouselIndicator.className = 'dtindicator';
-  carouselIndicator.setAttribute('id', parseInt(dts));
-  renderHTMLFragment.appendChild(carouselIndicator);
+for (var i = 0; i < carouselItems.length; i++) {
+  var _CAROUSEL_INDICATORS = document.createElement('LI');
+
+  _CAROUSEL_INDICATORS.className = 'dtindicator';
+
+  _CAROUSEL_INDICATORS.setAttribute('id', parseInt(i));
+
+  renderHTMLFragment.appendChild(_CAROUSEL_INDICATORS);
 }
 
-carouselIndicatorBar.appendChild(renderHTMLFragment);
-var carouselDotIndicator = document.querySelectorAll('#carousel-indicator li');
+CAROUSEL_INDICATORBAR.appendChild(renderHTMLFragment);
+var CAROUSEL_INDICATORS = document.querySelectorAll('#carousel-indicator li');
 
 var renderImage = function renderImage() {
-  for (var cimg = 0; cimg < carouselItems.length; cimg++) {
-    carouselItems[cimg].style.display = 'none';
+  for (var j = 0; j < carouselItems.length; j++) {
+    carouselItems[j].style.display = 'none';
   }
 
   carouselItems[currentIndex].style.display = 'block';
 };
 
 var renderDots = function renderDots() {
-  for (var cdot = 0; cdot < carouselItems.length; cdot++) {
-    carouselDotIndicator[cdot].style.backgroundColor = '#8adbd0';
+  for (var k = 0; k < carouselItems.length; k++) {
+    CAROUSEL_INDICATORS[k].style.backgroundColor = '#8adbd0';
   }
 
-  carouselDotIndicator[currentIndex].style.backgroundColor = '#3cc3b1';
+  CAROUSEL_INDICATORS[currentIndex].style.backgroundColor = '#3cc3b1';
 };
 
 document.getElementById('arrLft').addEventListener('click', function () {
@@ -52,12 +55,12 @@ document.getElementById('arrRgth').addEventListener('click', function () {
   renderDots();
   renderImage();
 });
-carouselDotIndicator.forEach(function (cind, i) {
-  cind.addEventListener('click', function () {
+CAROUSEL_INDICATORS.forEach(function (carouselIndicator, l) {
+  carouselIndicator.addEventListener('click', function () {
     if (currentIndex == 0) {
-      currentIndex = i;
+      currentIndex = l;
     } else {
-      currentIndex = i;
+      currentIndex = l;
     }
 
     renderImage();
