@@ -52,6 +52,7 @@ p {
 a {
   text-decoration: none;
   color: #3cc3b1;
+  cursor: pointer;
 }
 
 input {
@@ -152,59 +153,6 @@ input {
   padding: 10px;
 }
 
-.carousel {
-  position: relative;
-}
-.carousel-arrows {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  background-color: rgba(51, 51, 51, 0.2);
-}
-.carousel-arrows #arrLft, .carousel-arrows #arrRgth {
-  display: block;
-  color: #f2f2f2;
-  cursor: pointer;
-}
-.carousel-arrows #arrLft i, .carousel-arrows #arrRgth i {
-  height: 45px;
-  width: 45px;
-}
-.carousel ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  position: absolute;
-  bottom: -30px;
-  width: 100%;
-}
-
-.dtindicator {
-  display: block;
-  width: 10px;
-  height: 10px;
-  background-color: #8adbd0;
-  border-radius: 25px;
-  margin: 0 5px 0 5px;
-  cursor: pointer;
-}
-
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -244,6 +192,13 @@ header {
   margin-bottom: 30px;
 }
 
+#downloads {
+  background-blend-mode: multiply;
+  background-color: rgba(20, 20, 20, 0.6);
+  background-image: url("../pictures/map_dark.png");
+  background-position: center;
+  background-size: cover;
+}
 #downloads .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -252,6 +207,9 @@ header {
 #downloads .grid-2-col .grid-item {
   text-align: left;
 }
+#downloads .grid-2-col .grid-item h1, #downloads .grid-2-col .grid-item p {
+  color: #f2f2f2;
+}
 #downloads .grid-2-col .image {
   display: block;
 }
@@ -259,8 +217,9 @@ header {
 @media screen and (max-height: 818px) {
   #downloads {
     background-blend-mode: multiply;
-    background-color: #141414;
-    background-image: url("../pictures/map_dark.png") center;
+    background-color: rgba(20, 20, 20, 0.5);
+    background-image: url("../pictures/map_dark.png");
+    background-position: center;
     background-size: cover;
   }
   #downloads .grid-2-col {
@@ -610,42 +569,58 @@ header {
   -webkit-filter: invert(1);
           filter: invert(1);
   display: inline-block;
+  margin: auto;
 }
 .foo p {
-  color: black;
+  color: #141414;
 }
 .foo .gotoapps {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   background-color: rgba(60, 195, 177, 0.2);
   border-radius: 3px;
   color: #141414;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   font-size: 10px;
   padding: 5px;
   text-transform: uppercase;
   font-weight: bolder;
 }
 .foo .pre {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 .foo .pre .logo {
-  display: block;
-  background-color: red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0;
 }
 .foo .pre .logo .brand {
-  float: left;
+  margin-left: 10px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+.foo .pre .logo .brand p {
+  line-height: 15px;
+  font-weight: bolder;
 }
 .foo_navigation {
   padding: 20px 20px;
@@ -692,6 +667,11 @@ header {
 }
 .foo-bar .left a:hover {
   color: #3cc3b1;
+}
+.foo .copyright {
+  text-align: center;
+  font-size: 10px;
+  text-transform: uppercase;
 }
 
 .dark {
@@ -854,7 +834,7 @@ header {
 
   .container .image {
     display: none;
-    padding: 20pt 10pt;
+    padding: 10pt 10pt;
   }
 
   .container .content p {
@@ -897,6 +877,58 @@ header {
     margin-bottom: 20px;
   }
 }
+.carousel {
+  position: relative;
+}
+.carousel-arrows {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+}
+.carousel-arrows #arrLft, .carousel-arrows #arrRgth {
+  display: block;
+  color: #f2f2f2;
+  cursor: pointer;
+}
+.carousel-arrows #arrLft i, .carousel-arrows #arrRgth i {
+  height: 45px;
+  width: 45px;
+}
+.carousel ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  bottom: -30px;
+  width: 100%;
+}
+
+.dtindicator {
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: #8adbd0;
+  border-radius: 25px;
+  margin: 0 5px 0 5px;
+  cursor: pointer;
+}
+
 .block-right {
   float: right;
 }
