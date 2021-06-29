@@ -1,7 +1,6 @@
 "use strict";
 
 /* jshint esversion: 6 */
-// const emailValidation = document.getElementById('subscribeMail');
 var submitMail = document.getElementById("subscribeMail");
 var mailInput = document.querySelector(".subscribe-input");
 var alert = document.getElementById("mail-alert");
@@ -89,76 +88,83 @@ var saveDarkModeStatus = function saveDarkModeStatus() {
 
 detectNavigator();
 saveDarkModeStatus();
-var verSTDcar = document.querySelector(".carousel");
 
-if (verSTDcar) {
-  // C A R O U S E
-  var carouselItems = document.querySelectorAll("#carousel-img");
-  var CAROUSEL_INDICATORBAR = document.getElementById("carousel-indicator");
-  var HTMLFragment = document.createDocumentFragment();
-  var currentIndex = 0;
-
-  for (var i = 0; i < carouselItems.length; i++) {
-    var _CAROUSEL_INDICATORS = document.createElement("LI");
-
-    _CAROUSEL_INDICATORS.className = "dtindicator";
-
-    _CAROUSEL_INDICATORS.setAttribute("id", parseInt(i));
-
-    HTMLFragment.appendChild(_CAROUSEL_INDICATORS);
-  }
-
-  CAROUSEL_INDICATORBAR.appendChild(HTMLFragment);
-  var CAROUSEL_INDICATORS = document.querySelectorAll("#carousel-indicator li");
-
-  var renderImage = function renderImage() {
-    for (var j = 0; j < carouselItems.length; j++) {
-      carouselItems[j].style.display = "none";
-    }
-
-    carouselItems[currentIndex].style.display = "block";
-  };
-
-  var renderDots = function renderDots() {
-    for (var k = 0; k < carouselItems.length; k++) {
-      CAROUSEL_INDICATORS[k].style.backgroundColor = "#8adbd0";
-    }
-
-    CAROUSEL_INDICATORS[currentIndex].style.backgroundColor = "#3cc3b1";
-  };
-
-  document.getElementById("arrLft").addEventListener("click", function () {
-    if (currentIndex == 0) {
-      currentIndex = carouselItems.length - 1;
-    } else {
-      currentIndex--;
-    }
-
-    renderDots();
-    renderImage();
-  });
-  document.getElementById("arrRgth").addEventListener("click", function () {
-    if (currentIndex == carouselItems.length - 1) {
-      currentIndex = 0;
-    } else {
-      currentIndex++;
-    }
-
-    renderDots();
-    renderImage();
-  });
-  CAROUSEL_INDICATORS.forEach(function (carouselIndicator, l) {
-    carouselIndicator.addEventListener("click", function () {
-      if (currentIndex == 0) {
-        currentIndex = l;
-      } else {
-        currentIndex = l;
+if (document.querySelector(".carousel")) {
+  // C A R O U S E L
+  var carousel = {
+    items: document.querySelectorAll('#carousel-img'),
+    indicator_bar: document.getElementById('carousel-indicator'),
+    html_fragment: document.createDocumentFragment(),
+    currentIndex: 0,
+    indicators: function indicators() {
+      for (i = 0; i < this.items.length; i++) {
+        var dots = document.createElement('LI');
+        dots.className = 'dtindicator';
+        dots.setAttribute('id', parseInt(i));
+        this.indicator_bar.appendChild(dots);
       }
-
-      renderImage();
-      renderDots();
-    });
-  });
-  renderDots();
-  renderImage();
-}
+    }
+  };
+  carousel.indicators();
+} // const carouselItems = document.querySelectorAll("#carousel-img");
+// const CAROUSEL_INDICATORBAR = document.getElementById("carousel-indicator");
+// const HTMLFragment = document.createDocumentFragment();
+// let currentIndex = 0;
+// for (let i = 0; i < carouselItems.length; i++) {
+//   const CAROUSEL_INDICATORS = document.createElement("LI");
+//   CAROUSEL_INDICATORS.className = "dtindicator";
+//   CAROUSEL_INDICATORS.setAttribute("id", parseInt(i));
+//   HTMLFragment.appendChild(CAROUSEL_INDICATORS);
+// }
+// CAROUSEL_INDICATORBAR.appendChild(HTMLFragment);
+// const CAROUSEL_INDICATORS = document.querySelectorAll(
+//   "#carousel-indicator li"
+// );
+// const renderImage = () => {
+//   for (let j = 0; j < carouselItems.length; j++) {
+//     carouselItems[j].style.display = "none";
+//   }
+//   carouselItems[currentIndex].style.display = "block";
+// };
+// const renderDots = () => {
+//   for (let k = 0; k < carouselItems.length; k++) {
+//     CAROUSEL_INDICATORS[k].style.backgroundColor = "#8adbd0";
+//     CAROUSEL_INDICATORS[k].style.height = '5px';
+// 		CAROUSEL_INDICATORS[k].style.width = '5px';
+//   }
+//   CAROUSEL_INDICATORS[currentIndex].style.backgroundColor = "#3cc3b1";
+//   CAROUSEL_INDICATORS[currentIndex].style.height = '10px';
+//   CAROUSEL_INDICATORS[currentIndex].style.width = '10px';
+//   CAROUSEL_INDICATORS[currentIndex].style.transition = '.3s all ease';
+// };
+// document.getElementById("arrLft").addEventListener("click", () => {
+//   if (currentIndex == 0) {
+//     currentIndex = carouselItems.length - 1;
+//   } else {
+//     currentIndex--;
+//   }
+//   renderDots();
+//   renderImage();
+// });
+// document.getElementById("arrRgth").addEventListener("click", () => {
+//   if (currentIndex == carouselItems.length - 1) {
+//     currentIndex = 0;
+//   } else {
+//     currentIndex++;
+//   }
+//   renderDots();
+//   renderImage();
+// });
+// CAROUSEL_INDICATORS.forEach((carouselIndicator, l) => {
+//   carouselIndicator.addEventListener("click", () => {
+//     if (currentIndex == 0) {
+//       currentIndex = l;
+//     } else {
+//       currentIndex = l;
+//     }
+//     renderImage();
+//     renderDots();
+//   });
+// });
+// renderDots();
+// renderImage();
