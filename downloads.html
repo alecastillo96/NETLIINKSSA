@@ -46,10 +46,22 @@
     </nav><br/>
     <div class="container container-tinted" id="security">
       <div class="grid-2-col">
-        <div class="carousel">
-          <div class="carousel-arrows"><span id="arrLft"><i data-feather="chevron-left"></i></span><span id="arrRgth"><i data-feather="chevron-right"></i></span></div>
-          <div class="carousel-content"><img class="image" id="carousel-img" alt="NETLIINKS S.A." src="src/pictures/netliinks-imgs-render-1.png"/><img class="image" id="carousel-img" alt="NETLIINKS S.A." src="src/pictures/netliinks-imgs-render-2.png"/></div>
-          <ul id="carousel-indicator"></ul>
+        <div class="carousel" id="carousel">
+          <div class="car__dirs">
+            <div id="car__dir_left">
+              <icon data-icon="chevron-left" id="icon"></icon>
+            </div>
+            <div id="car__dir_right">
+              <icon data-icon="chevron-right" id="icon"></icon>
+            </div>
+          </div>
+          <div class="car__content">
+            <div class="car__item"><img class="image" id="carousel-img" alt="NETLIINKS S.A." src="src/pictures/netliinks-imgs-render-1.png"/></div>
+            <div class="car__item"><img class="image" id="carousel-img" alt="NETLIINKS S.A." src="src/pictures/netliinks-imgs-render-2.png"/></div>
+          </div>
+          <ul id="car__indicator_bar">
+            <div id="car__indicator_bar_content"></div>
+          </ul>
         </div>
         <div class="content">
           <h2 class="title-left">NetGuard / NetVisitors</h2>
