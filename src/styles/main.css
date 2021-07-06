@@ -19,32 +19,32 @@ h1, h2, h3, h4, h5, b {
 }
 
 h1 {
-  font-size: 42.724609375px;
-  line-height: 59.8145129395px;
+  font-size: 48.828125px;
+  line-height: 68.3594433594px;
 }
 
 h2 {
-  font-size: 34.1796875px;
-  line-height: 47.8516103516px;
+  font-size: 39.0625px;
+  line-height: 54.6875546876px;
 }
 
 h3 {
-  font-size: 27.34375px;
-  line-height: 38.2812882813px;
+  font-size: 31.25px;
+  line-height: 43.75004375px;
 }
 
 h4 {
-  font-size: 21.875px;
-  line-height: 30.625030625px;
+  font-size: 25px;
+  line-height: 35.000035px;
 }
 
 h5 {
-  font-size: 17.5px;
-  line-height: 24.5000245px;
+  font-size: 20px;
+  line-height: 28.000028px;
 }
 
 p {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.75;
   color: #5e5e5e;
 }
@@ -174,7 +174,7 @@ header {
   background-blend-mode: multiply;
 }
 #index small {
-  font-size: 27.34375px;
+  font-size: 31.25px;
   font-weight: 200;
   font-style: italic;
   letter-spacing: -2px;
@@ -416,6 +416,19 @@ header {
   background-size: 100%;
   background-position: center;
 }
+.navbar_currentPage {
+  margin: 0;
+  background-color: #40c4b3;
+  padding: 5px;
+  text-align: center;
+}
+.navbar_currentPage h3 {
+  font-size: 10px !important;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
 
 .remove-transparency {
   background: #f2f2f2 !important;
@@ -651,7 +664,7 @@ header {
 }
 .foo-bar .right li a {
   color: #141414;
-  font-size: 11px;
+  font-size: 13px;
   padding: 0 5px;
 }
 .foo-bar .right li .active {
@@ -667,7 +680,7 @@ header {
 }
 .foo-bar .left a {
   color: #141414;
-  font-size: 11px;
+  font-size: 13px;
 }
 .foo-bar .left a:hover {
   color: #3cc3b1;
@@ -731,6 +744,9 @@ header {
   border-top: 1px solid #737373;
   border-bottom: 1px solid #737373;
 }
+.dark .p13487ph {
+  color: #f2f2f2;
+}
 
 @media screen and (max-width: 1048px) {
   #downloads {
@@ -764,6 +780,12 @@ header {
   }
 }
 @media screen and (max-width: 970px) {
+  .navbar_currentPage {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+
   .grid-2-col, .btn-group {
     grid-template-columns: 1fr;
   }
@@ -1066,4 +1088,15 @@ header {
 }
 .block-right {
   float: right;
+}
+
+.p13487ph {
+  display: block;
+  width: 100%;
+  max-width: 1024px;
+  margin: auto;
+}
+.p13487ph ul li {
+  margin-bottom: 32px;
+  line-height: 22px;
 }

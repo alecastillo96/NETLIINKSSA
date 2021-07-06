@@ -1,46 +1,48 @@
 "use strict";
 
 /* jshint esversion: 6 */
-var submitMail = document.getElementById("subscribeMail");
-var mailInput = document.querySelector(".subscribe-input");
-var alert = document.getElementById("mail-alert");
-submitMail.addEventListener("click", function (e) {
-  e.preventDefault();
-  var error = validateData();
-  var msg = mailInput.value;
+if (document.getElementById('subscribeMail')) {
+  var submitMail = document.getElementById("subscribeMail");
+  var mailInput = document.querySelector(".subscribe-input");
+  var alert = document.getElementById("mail-alert");
+  submitMail.addEventListener("click", function (e) {
+    e.preventDefault();
+    var error = validateData();
+    var msg = mailInput.value;
 
-  if (error[0]) {
-    alert.classList.remove("mail-alert-success");
-    alert.innerHTML = "<span><b>".concat(error[1], "</span>");
-    alert.classList.add("mail-alert-error");
-  } else {
-    alert.classList.remove("mail-alert-error");
-    alert.innerHTML = "<span><b>".concat(msg, "</b> te has subscrito \uD83C\uDF89 </span>");
-    alert.classList.add("mail-alert-success");
-    mailInput.value = "";
-  }
-});
+    if (error[0]) {
+      alert.classList.remove("mail-alert-success");
+      alert.innerHTML = "<span><b>".concat(error[1], "</span>");
+      alert.classList.add("mail-alert-error");
+    } else {
+      alert.classList.remove("mail-alert-error");
+      alert.innerHTML = "<span><b>".concat(msg, "</b> te has subscrito \uD83C\uDF89 </span>");
+      alert.classList.add("mail-alert-success");
+      mailInput.value = "";
+    }
+  });
 
-var validateData = function validateData() {
-  var error = [];
+  var validateData = function validateData() {
+    var error = [];
 
-  if (mailInput.value.length < 5) {
-    error[0] = true;
-    error[1] = "<span>⚠️</span><i><b> Error:</b> El correo no puede contener menos de 5 caracteres.</i>";
-    return error;
-  } else if (mailInput.value.indexOf("@") === -1) {
-    error[0] = true;
-    error[1] = "<span>⚠️</span><i><b> Error:</b> Parece que esta no es una dirección de correo válida <strong>Falta: arroba</strong></i>";
-    return error;
-  } else if (mailInput.value.indexOf(".") === -1) {
-    error[0] = true;
-    error[1] = "<span>⚠️</span><i><b> Error:</b> parece que esta no es una dirección de correo válida. <b><code>Falta: punto</code><b></i></i>";
-    return error;
-  } else {
-    error[0] = false;
-    return error;
-  }
-};
+    if (mailInput.value.length < 5) {
+      error[0] = true;
+      error[1] = "<span>⚠️</span><i><b> Error:</b> El correo no puede contener menos de 5 caracteres.</i>";
+      return error;
+    } else if (mailInput.value.indexOf("@") === -1) {
+      error[0] = true;
+      error[1] = "<span>⚠️</span><i><b> Error:</b> Parece que esta no es una dirección de correo válida <strong>Falta: arroba</strong></i>";
+      return error;
+    } else if (mailInput.value.indexOf(".") === -1) {
+      error[0] = true;
+      error[1] = "<span>⚠️</span><i><b> Error:</b> parece que esta no es una dirección de correo válida. <b><code>Falta: punto</code><b></i></i>";
+      return error;
+    } else {
+      error[0] = false;
+      return error;
+    }
+  };
+}
 
 var toggleNavbar = document.getElementById("toggle-menu");
 toggleNavbar.addEventListener("click", function () {
