@@ -16,7 +16,7 @@ if (document.getElementById('subscribeMail')) {
       alert.classList.add("mail-alert-error");
     } else {
       alert.classList.remove("mail-alert-error");
-      alert.innerHTML = "<span><b>".concat(msg, "</b> te has subscrito \uD83C\uDF89 </span>");
+      alert.innerHTML = "<span><b>".concat(msg, "</b> te has suscrito \uD83C\uDF89 </span>");
       alert.classList.add("mail-alert-success");
       mailInput.value = "";
     }
@@ -27,15 +27,15 @@ if (document.getElementById('subscribeMail')) {
 
     if (mailInput.value.length < 5) {
       error[0] = true;
-      error[1] = "<span>⚠️</span><i><b> Error:</b> El correo no puede contener menos de 5 caracteres.</i>";
+      error[1] = "<span>El correo no puede contener menos de 5 caracteres.</span>";
       return error;
     } else if (mailInput.value.indexOf("@") === -1) {
       error[0] = true;
-      error[1] = "<span>⚠️</span><i><b> Error:</b> Parece que esta no es una dirección de correo válida <strong>Falta: arroba</strong></i>";
+      error[1] = "<span>Parece que no esta no es una dirección de correo válida. <i>Falta: '@'</i></span>";
       return error;
     } else if (mailInput.value.indexOf(".") === -1) {
       error[0] = true;
-      error[1] = "<span>⚠️</span><i><b> Error:</b> parece que esta no es una dirección de correo válida. <b><code>Falta: punto</code><b></i></i>";
+      error[1] = "<span>Parece que esta no es una dirección de correo válida. <i>Falta: '.' </i></span>";
       return error;
     } else {
       error[0] = false;
