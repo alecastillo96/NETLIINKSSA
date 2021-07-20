@@ -746,6 +746,9 @@ header {
 .dark .dark-logo {
   display: none !important;
 }
+.dark .p13487ph {
+  color: #f2f2f2;
+}
 
 @media screen and (max-width: 1048px) {
   #downloads {
@@ -828,15 +831,7 @@ header {
   #security {
     background-blend-mode: multiply;
     background-color: rgba(20, 20, 20, 0.9);
-    background-image: url("../pictures/picture1.png");
-    background-size: cover;
-    background-position: center;
-  }
-
-  #networking {
-    background-blend-mode: multiply;
-    background-color: rgba(20, 20, 20, 0.9);
-    background-image: url("../pictures/picture2.png");
+    background-image: url("https://images.unsplash.com/photo-1563920443079-783e5c786b83?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1353&q=80");
     background-size: cover;
     background-position: center;
   }
@@ -844,7 +839,7 @@ header {
   #ti {
     background-blend-mode: multiply;
     background-color: rgba(20, 20, 20, 0.9);
-    background-image: url("../pictures/picture3.jpg");
+    background-image: url("https://images.unsplash.com/photo-1523655223303-4e9ef5234587?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=753&q=80");
     background-size: cover;
     background-position: center;
   }
@@ -852,7 +847,7 @@ header {
   #software {
     background-blend-mode: multiply;
     background-color: rgba(20, 20, 20, 0.9);
-    background-image: url("../pictures/picture4.png");
+    background-image: url("https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80");
     background-size: cover;
     background-position: center;
   }
